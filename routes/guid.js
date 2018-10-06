@@ -7,8 +7,7 @@ router.get('/', (req, res, next) => {
 
   let guidColl = uuid.createArray(100, 'v1', true, false);
 
-  res.render('guid', { message: 'Hello from Guid Page ...', collection: guidColl })
+  res.render('guid', { title: "Unique ID", message: 'Hello from Guid Page ...', collection: guidColl })
 })
-
 
 module.exports = router;
