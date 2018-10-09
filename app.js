@@ -1,16 +1,19 @@
-var createError = require('http-errors');
-var express = require('express');
-var expressEjsLayouts = require('express-ejs-layouts');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+let createError = require('http-errors');
+let express = require('express');
+let expressEjsLayouts = require('express-ejs-layouts');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var guidRouter = require('./routes/guid');
-var randomNumberRouter = require('./routes/random-number');
+let indexRouter = require('./routes/index');
+let usersRouter = require('./routes/users');
+let guidRouter = require('./routes/guid');
+let randomNumberRouter = require('./routes/random-number');
+let randomTextRouter = require('./routes/random-text');
+let randomJsonRouter = require('./routes/random-json');
 
-var app = express();
+
+let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,6 +34,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/guid', guidRouter);
 app.use('/random-number', randomNumberRouter);
+app.use('/random-text', randomTextRouter);
+app.use('/random-json', randomJsonRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

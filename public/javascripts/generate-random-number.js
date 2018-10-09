@@ -34,8 +34,10 @@ function createRandomNumber(length) {
   return rn.getValue();
 }
 
-// TODO: make ALL FUNCTIONS use this library
+// TODO: make ALL FUNCTIONS use this library?
 function createRandomAlphaSpecialChars(length) {
+  // randomatic NPM package
+
   // randomize('*', 10); //=> 'x2_^-5_T[$'
   // randomize('Aa0!', 10); //=> 'LV3u~BSGhw'  
   return randomize('*', length);
