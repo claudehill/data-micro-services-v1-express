@@ -1,30 +1,31 @@
-let createError = require('http-errors');
-let express = require('express');
-let expressEjsLayouts = require('express-ejs-layouts');
-let path = require('path');
-let cookieParser = require('cookie-parser');
-let logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const expressEjsLayouts = require('express-ejs-layouts');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const guidRouter = require('./routes/guid');
+const randomNumberRouter = require('./routes/random-number');
+const randomTextRouter = require('./routes/random-text');
+const randomJsonRouter = require('./routes/random-json');
+const jwtTestPageRouter = require('./routes/jwt-test');
 
-let indexRouter = require('./routes/index');
-let usersRouter = require('./routes/users');
-let guidRouter = require('./routes/guid');
-let randomNumberRouter = require('./routes/random-number');
-let randomTextRouter = require('./routes/random-text');
-let randomJsonRouter = require('./routes/random-json');
-
-
-let app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(expressEjsLayouts);  // use to set layout
+// app.use(expressEjsLayouts);  // use to set layout
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/js', express.static(path.join(__dirname, 'public/javascripts')));
 app.use('/img', express.static(path.join(__dirname, 'public/images')));
@@ -36,6 +37,7 @@ app.use('/guid', guidRouter);
 app.use('/random-number', randomNumberRouter);
 app.use('/random-text', randomTextRouter);
 app.use('/random-json', randomJsonRouter);
+app.use('/jwt-test', jwtTestPageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
