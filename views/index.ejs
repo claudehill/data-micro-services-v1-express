@@ -1,14 +1,180 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html> -->
 
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
+  <!-- Header -->
+  <header class="showcase">
+    <div class="wrapper">
+      <div class="content">
+        <div class="title">
+          <h1 class="showcase-heading display-3">Welcome to the <span class="color-secondary">Data Caf&eacute;</span></h1>
+        </div>
+        <div class="text">
+          <div class="images-showcase">
+            <img src="img/icon-reverse-coffee1.png" alt="">
+            <img src="img/icon-reverse-code1.png" alt="">
+          </div>
+          <h5 class="showcase-heading">Free test data and utilities for developers, testers, tinkerers and makers.</h5>
+        </div>
+        <a href="#" class="btn mt-4 text-white"> <i class="fas fa-chevron-circle-down fa-4x"></i> </a>
+      </div>
+    </div>
+  </header>
+  
+  <%- include('partials/message-adblocker') %>
+
+    <!-- Section: data menu -->
+    <section class="section main-features bg-light">
+      <div class="container">
+        <div class="jumbotron">
+          <h1 class="display-3 text-center">I <span><i class="fas fa-heart color-secondary"></i></span> Free Data! </h1>
+          <p class="lead">
+            Have you ever run into a situation where you needed some randomized test data to quickly test your
+            application? If so, then the Data Caf&eacute; was created just for you!
+          </p>
+          <p class="lead">
+            Similar to a small local neighborhood caf‌&eacute; with a limited menu full of goodies and a casual atomosphere, you'll
+            find tools that will help speed up prototyping and unit / system / integration testing of websites, apps, and other projects where you need specific
+            data of varying types.
+          </p>
+          <p class="lead">
+            Here, you can quickly generate a variety of data instances
+            including unique IDs, Random Numbers, Random Text and JSON Data Objects. You can learn more about the available data
+            formats below:
+          </p>
+  
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th class="text-center">
+                  <strong>Data Type</strong>
+                </th>
+                <th class="text-center">
+                  <strong>Max Count <span><a href="#">*</a></span></strong>
+                </th>
+                <th class="text-center">
+                  <strong>Options</strong>
+                </th>
+                <th class="text-center">
+                  <strong>Your Quota</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Unique ID</strong> </td>
+                <td>Up to 1,000 per request</td>
+                <td>
+                  <ol>
+                    <li>Cryptograpic Strength</li>
+                    <li>Output Format</li>
+                  </ol>
+                </td>
+                <td>
+                  <!-- <a href="" class="btn btn-primary">Learn more</a> -->
+                  <span><span class="badge badge-success">Max Data</span></span>
+                </td>
+  
+              </tr>
+              <tr>
+                <td><strong>Random Number</strong> </td>
+                <td>Up to 100 numbers per request</td>
+                <td>
+                  <ol>
+                    <li>Length</li>
+                    <li>Numeric</li>
+                    <li>Alphanumeric</li>
+                  </ol>
+                </td>
+                <td>
+                  <a href="" class="btn btn-primary">Learn more</a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Random Text</strong> </td>
+                <td>See Details Page</td>
+                <td>
+                  <ol>
+                    <li>Nbr. of Paragraphs</li>
+                    <li>Total Size</li>
+                  </ol>
+                </td>
+                <td>
+                  <a href="" class="btn btn-primary">Learn more</a>
+                </td>
+              </tr>
+              <tr>
+                <td> <strong>JSON Data</strong></td>
+                <td>Up to 100 entities per request</td>
+                <td>
+                  <ol>
+                    <li>Included fields</li>
+                    <li>Output format</li>
+                  </ol>
+                </td>
+                <td>
+                  <a href="" class="btn btn-primary">Learn more</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="lead"> <span id="adinfo">*</span> NOTE: Using adblockers on this site may limit or disable certain features (including the amount
+            of data able to be retrieved per request).</p>
+        </div>
+  
+        <div class="heading mx-auto pb-2">
+          <h2>Select Data Below ...</h2>
+        </div>
+        <div class="row menu-row">
+          <div class="col-md-6 col-sm-12">
+            <div class="card text-white bg-primary mb-3 card-home">
+              <div class="card-header text-center">Unique ID</div>
+              <img src="img/icon-reverse-finger9.png" alt="" srcset="">
+              <div class="card-body">
+                <h4 class="card-title text-center">Generate Unique ID</h4>
+                <p class="card-text">Create 1 to 100 32-bit Globally Unique Identifiers (sometimes referred to as a GUID
+                  or UUID) for identification or temporary passwords.</p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-get-data"> <span><img src="img/icon-data-download-sm1.png"
+                    class="btn-icon-inline"></span> Get Data</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="card text-white bg-primary mb-3 card-home">
+              <div class="card-header text-center">Random Number</div>
+              <img src="img/icon-reverse-number1.png" alt="" srcset="">
+              <div class="card-body">
+                <h4 class="card-title text-center">Generate Random Numbers</h4>
+                <p class="card-text">Create 1 to 100 text, numeric or mixed random numbers of a specified length.</p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-get-data"> <span><img src="img/icon-data-download-sm1.png"
+                    class="btn-icon-inline"></span> Get Data</button>
+            </div>
+          </div>
+  
+        </div>
+        <div class="row menu-row">
+          <div class="col-md-6 col-sm-12">
+            <div class="card text-white bg-primary mb-3 card-home">
+              <div class="card-header text-center">Random Text</div>
+              <img src="img/icon-reverse-text1.png" alt="" srcset="">
+              <div class="card-body">
+                <h4 class="card-title text-center">Generate Random Text</h4>
+                <p class="card-text">Create dummy placeholder text, designating paragraph and word count</p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-get-data"> <span><img src="img/icon-data-download-sm1.png"
+                    class="btn-icon-inline"></span> Get Data</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="card text-white bg-primary mb-3 card-home">
+              <div class="card-header text-center">JSON Data</div>
+              <img src="img/icon-reverse-code2.png" alt="" srcset="">
+              <div class="card-body">
+                <h4 class="card-title text-center">Generate JSON Data</h4>
+                <p class="card-text">Generate 1 to 100 entities of JSON Data, with various fields</p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-get-data btn-get-data"> <span><img src="img/icon-data-download-sm1.png"
+                    class="btn-icon-inline"></span> Get Data</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

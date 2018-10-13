@@ -31,6 +31,7 @@
     "cookie-parser": "~1.4.3",
     "crypto-random-string": "^1.0.0",
     "debug": "~2.6.9",
+    "dotenv": "^6.1.0",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "express-ejs-layouts": "^2.5.0",

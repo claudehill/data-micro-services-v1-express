@@ -1,0 +1,342 @@
+/* https://bootswatch.com/lux/ */
+
+/* Main Theme Font */
+/* font-family: 'Nunito Sans', sans-serif; */
+/* coffee color */
+/* bd6e2d  / rgb(189, 110, 45) */
+
+ 
+body {
+  /* background: rgba(0,0,0,0.6); */
+  margin: 0;
+  top: 0;
+  /* color: #fff; */
+  /* font-family: 'Courier New', Courier, monospace; */
+  color: #5a5a5a;
+}
+
+.showcase {
+  position: relative;
+}
+
+.showcase::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url('../img/cafe6.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  transition: all 1000ms;
+}
+
+.showcase:hover::after {
+  /* filter: blur(0px);
+  -webkit-filter: blur(0px); */
+}
+
+.wrapper {
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.showcase:hover .content {
+  /* filter: blur(2px); */
+  /* -webkit-filter: blur(2px); */
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 50%;
+  margin-top: 10%;
+  margin-left: -190px;
+   width: 400px;
+  height: 400px;
+  text-align: center;
+  transition: all 100ms;
+}
+
+.content .logo {
+  height: 180px;
+  width: 180px;
+}
+
+.content .title {
+  font-size: 2.2rem;
+  /* margin-top: 1rem; */
+}
+
+.content .title h1,
+.title h2 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.content .text {
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.text i.fas {
+  margin: 5px 10px;
+}
+
+.showcase-heading {
+  color: #fff;
+  /* font-size: 1.2rem; */
+  padding: 1rem;
+}
+
+.content:after {
+  content: '';
+  z-index: 5;
+  display: block;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(56, 56, 56, 0.5);
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 1rem;
+}
+
+.container-sm {
+  width: 90%;
+  padding: 2%;
+}
+
+.section .main-features {
+  /* background-color: #353535; */
+  background-color: #e4e4e4;
+}
+
+.images-showcase img {
+  color: #fff;
+  width: 80px;
+  height: 80px;
+}
+
+.color-secondary {
+  color: rgb(160, 119, 5);
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.menu-row {
+  padding-top: 25px;
+}
+
+.card {
+  z-index: 2;
+  box-shadow: 5px 5px 5px rgb(190, 190, 190);
+  text-transform: none;
+  min-height: 400px;
+}
+
+.card button {
+  margin: 10px;
+}
+
+.card-body h4 {
+  border-bottom: 1px solid;
+}
+
+.card img {
+  /* background-color: #e4e4e4; */
+  width: 100px;
+  height: 100px;
+  /* color: #fff; */
+  margin: auto;
+}
+
+.card ul {
+  columns: 3;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.card button {
+  margin: 5px !important;
+  font-size: 1.1rem;
+}
+
+.card button:hover {
+  background-color: rgb(202, 149, 2);
+}
+
+.section-lead {
+  /* color: #e4e4e4; */
+}
+
+.section-lead p {
+  font-size: 1.3rem;
+}
+
+
+.btn-icon-inline {
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.btn-get-data {
+  display: flex;
+  align-items: center;
+  display: inline;
+}
+
+footer {
+  color: #e4e4e4;
+}
+
+#hero-guid {
+  background-image: url('../img/cafe2.jpeg');
+}
+#hero-random-number {
+  background-image: url('../img/coffee-beans2.jpeg');
+}
+
+.hero {
+  position: relative;
+  /* background-image: url('../img/cafe2.jpeg'); */
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.hero::after {
+  content: '';
+  /* height: 25vh; */
+  /* width: 100%; */
+  /* background-image: url('../img/cafe2.jpeg'); */
+  /* background-size: cover; */
+}
+
+.wrapper-hero {
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.wrapper-hero img {
+  max-height: 100px;
+  max-width: 100px;
+  margin-top: 20px;
+}
+
+.wrapper-hero .content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+/* .recaptcha-wrapper {
+  display: block;    
+} */
+
+.g-recaptcha > div{
+  margin: 10px auto !important;
+  text-align: center;
+  width: auto !important;
+  height: auto !important;
+ }
+
+ .btn-submit-main {
+     display: block;
+ }
+
+ .btn-submit-main:hover,
+ .btn-option-main:hover {
+     background-color: rgb(160, 119, 5);
+     color: #fff;
+ }
+
+ textarea {
+     resize: none;
+     overflow-y: scroll;
+ }
+
+ .section-output {
+  position: relative;
+  min-height: 400px;
+ }
+
+ #output-data-guid{
+     background: url('../img/coffee-mug6.jpeg');
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+
+ #output-data-random-number {
+     background: url('../img/coffee-mug3.jpeg');
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+
+ .overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+ }
+
+ .container {
+     min-width: 80% !important;
+ }
+
+  .radio-group {
+     padding-top: 0.5rem !important;
+     padding-bottom: 0.5rem !important;
+ }
+
+ .card {
+     min-height: auto !important;
+ }
+
+ .card-home {
+     min-height: 350px !important;
+ }
+
+ .adblock-buttons {
+  display: flex;
+  align-items: center;
+  /* flex-direction: row; */
+  /* gap: 10px;
+  grid-gap: 10px; */
+  justify-content: center;
+ }
+
+ .bg-light {
+   border: none !important;
+ }
+
+
