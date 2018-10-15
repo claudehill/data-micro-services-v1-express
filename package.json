@@ -55,6 +55,7 @@
     "randomatic": "^3.1.0",
     "rnum": "^1.0.0",
     "titleize": "^1.0.1",
+    "toastr": "^2.1.4",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

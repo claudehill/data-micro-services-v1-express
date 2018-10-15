@@ -61,8 +61,8 @@ router.post('/token-verify', verifyToken, (req, res) => {
     } else {
       userMode = authData.tokenData.user_mode;
       adBlocker = authData.tokenData.adblocker_detected;
-      console.log('from /token-test, userMode ... ', userMode);
-      console.log('from /token-test, adBlocker ... ', adBlocker);
+      console.log('from /token-verify, userMode ... ', userMode);
+      console.log('from /token-verify, adBlocker ... ', adBlocker);
       res.json({ message: 'success ... ', authData, userMode, adBlocker })
     }
   })

@@ -8,19 +8,15 @@ var userMode;
 var message; // were we contacted?...
 var adblocker;
 var adblockNotice = document.getElementById('adblock-notice');
-
-// if (el) {
-//   alert('Blocking Ads: No');
-// } else {
-//   alert('Blocking Ads: Yes');
-// }
+var quotaColl =
+  ['user-quota-uuid',
+    'user-quota-randomNbr',
+    'user-quota-randomTxt',
+    'user-quota-json']
 
 if (el) {
   adblockNotice.remove();
-} else {
-  // add notice by default ... 
-  // adblockNotice.style.visibility = 'visible';
-}
+} 
 
 fetch('/globals/token-fetch', {
   method: 'POST',
@@ -50,6 +46,51 @@ fetch('/globals/token-fetch', {
         userMode = res.userMode;
         message = res.message;
         adblocker = res.adblocker;
+        return res;
+      })
+      .then((res) => {
+        switch (userMode) {
+          case 'RESTRICTED':
+            userModeIsRestricted();
+            break;
+          case 'UNRESTRICTED':
+            userModeIsUnrestricted();
+        }
       })
       .catch(err => console.log('** ERROR ** ', err))
   })
+
+// -- USER MODE RESTRICTED
+function userModeIsRestricted() {
+  quotaColl.forEach(el => {
+    var x = document.getElementById(el);
+    x.classList.remove('badge-success');
+    x.classList.add('badge-danger');
+    x.innerText = '1 Data Element'
+    x.innerText = '1 / Request';
+  })
+}
+// -- USER MODE UNRESTRICTED
+function userModeIsUnrestricted() {
+  quotaColl.forEach(el => {
+    var x = document.getElementById(el);
+    x.classList.remove('badge-danger');
+    x.classList.add('badge-success');
+    x.innerText = 'Max. / Request'
+  })
+}
+
+var btnAdblockRetry = document.getElementById('btn-adblock-retry');
+if (btnAdblockRetry) {
+  btnAdblockRetry.addEventListener('click', () => {
+    window.location.reload();
+  })
+}
+
+
+var btnAdblockDismiss = document.getElementById('btn-adblock-dismiss');
+if (btnAdblockDismiss) {
+  btnAdblockDismiss.addEventListener('click', () => {
+    $('#adblock-notice').remove();
+  });
+}

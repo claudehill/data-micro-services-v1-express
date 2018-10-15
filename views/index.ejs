@@ -43,17 +43,17 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                <th class="text-center">
+                <th class="">
                   <strong>Data Type</strong>
                 </th>
-                <th class="text-center">
+                <th class="">
                   <strong>Max Count <span><a href="#">*</a></span></strong>
                 </th>
-                <th class="text-center">
-                  <strong>Options</strong>
-                </th>
-                <th class="text-center">
+                <th class="">
                   <strong>Your Quota</strong>
+                </th>                
+                <th class="">
+                  <strong>Options</strong>
                 </th>
               </tr>
             </thead>
@@ -61,21 +61,22 @@
               <tr>
                 <td><strong>Unique ID</strong> </td>
                 <td>Up to 1,000 per request</td>
+                  <td>
+                  <span class="badge badge-success user-quota p-2" id="user-quota-uuid"> Maximum Data</span>
+                </td>              
                 <td>
                   <ol>
                     <li>Cryptograpic Strength</li>
                     <li>Output Format</li>
                   </ol>
-                </td>
-                <td>
-                  <!-- <a href="" class="btn btn-primary">Learn more</a> -->
-                  <span><span class="badge badge-success">Max Data</span></span>
-                </td>
-  
+                </td>  
               </tr>
               <tr>
                 <td><strong>Random Number</strong> </td>
                 <td>Up to 100 numbers per request</td>
+               <td>
+                  <span class="badge badge-success user-quota p-2" id="user-quota-randomNbr"> Maximum Data</span>
+                </td>                
                 <td>
                   <ol>
                     <li>Length</li>
@@ -83,35 +84,33 @@
                     <li>Alphanumeric</li>
                   </ol>
                 </td>
-                <td>
-                  <a href="" class="btn btn-primary">Learn more</a>
-                </td>
               </tr>
               <tr>
                 <td><strong>Random Text</strong> </td>
                 <td>See Details Page</td>
+                <td>
+                    <span class="badge badge-success user-quota p-2" id="user-quota-randomTxt"> Maximum Data</span>
+                  </td>                
                 <td>
                   <ol>
                     <li>Nbr. of Paragraphs</li>
                     <li>Total Size</li>
                   </ol>
                 </td>
-                <td>
-                  <a href="" class="btn btn-primary">Learn more</a>
-                </td>
               </tr>
               <tr>
                 <td> <strong>JSON Data</strong></td>
                 <td>Up to 100 entities per request</td>
+              <td>
+                  <span class="badge badge-success user-quota p-2" id="user-quota-json"> Maximum Data</span>
+                </td>                
                 <td>
                   <ol>
                     <li>Included fields</li>
                     <li>Output format</li>
                   </ol>
                 </td>
-                <td>
-                  <a href="" class="btn btn-primary">Learn more</a>
-                </td>
+  
               </tr>
             </tbody>
           </table>
@@ -125,8 +124,8 @@
         <div class="row menu-row">
           <div class="col-md-6 col-sm-12">
             <div class="card text-white bg-primary mb-3 card-home">
-              <div class="card-header text-center">Unique ID</div>
-              <img src="img/icon-reverse-finger9.png" alt="" srcset="">
+                <div class="card-header text-center">&nbsp;</div>
+                <img src="img/icon-reverse-finger9.png" alt="" srcset="">
               <div class="card-body">
                 <h4 class="card-title text-center">Generate Unique ID</h4>
                 <p class="card-text">Create 1 to 100 32-bit Globally Unique Identifiers (sometimes referred to as a GUID
@@ -138,8 +137,8 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="card text-white bg-primary mb-3 card-home">
-              <div class="card-header text-center">Random Number</div>
-              <img src="img/icon-reverse-number1.png" alt="" srcset="">
+                <div class="card-header text-center">&nbsp;</div>
+                <img src="img/icon-reverse-number1.png" alt="" srcset="">
               <div class="card-body">
                 <h4 class="card-title text-center">Generate Random Numbers</h4>
                 <p class="card-text">Create 1 to 100 text, numeric or mixed random numbers of a specified length.</p>
@@ -153,8 +152,8 @@
         <div class="row menu-row">
           <div class="col-md-6 col-sm-12">
             <div class="card text-white bg-primary mb-3 card-home">
-              <div class="card-header text-center">Random Text</div>
-              <img src="img/icon-reverse-text1.png" alt="" srcset="">
+                <div class="card-header text-center">&nbsp;</div>
+                <img src="img/icon-reverse-text1.png" alt="" srcset="">
               <div class="card-body">
                 <h4 class="card-title text-center">Generate Random Text</h4>
                 <p class="card-text">Create dummy placeholder text, designating paragraph and word count</p>
@@ -165,7 +164,7 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="card text-white bg-primary mb-3 card-home">
-              <div class="card-header text-center">JSON Data</div>
+              <div class="card-header text-center">&nbsp;</div>
               <img src="img/icon-reverse-code2.png" alt="" srcset="">
               <div class="card-body">
                 <h4 class="card-title text-center">Generate JSON Data</h4>
