@@ -12,11 +12,14 @@ var quotaColl =
   ['user-quota-uuid',
     'user-quota-randomNbr',
     'user-quota-randomTxt',
-    'user-quota-json']
+    'user-quota-json'];
+// var countGuid = document.getElementById('select-guid-count');
+var isHomePage = document.title.toLowerCase().includes('home');
+var isGuidPage = document.title.toLowerCase().includes('unique id');
 
 if (el) {
   adblockNotice.remove();
-} 
+}
 
 fetch('/globals/token-fetch', {
   method: 'POST',
@@ -51,33 +54,37 @@ fetch('/globals/token-fetch', {
       .then((res) => {
         switch (userMode) {
           case 'RESTRICTED':
-            userModeIsRestricted();
+            userModeIsRestrictedHomePage();
             break;
           case 'UNRESTRICTED':
-            userModeIsUnrestricted();
+            userModeIsUnrestrictedHomePage();
         }
       })
       .catch(err => console.log('** ERROR ** ', err))
   })
 
 // -- USER MODE RESTRICTED
-function userModeIsRestricted() {
-  quotaColl.forEach(el => {
-    var x = document.getElementById(el);
-    x.classList.remove('badge-success');
-    x.classList.add('badge-danger');
-    x.innerText = '1 Data Element'
-    x.innerText = '1 / Request';
-  })
+function userModeIsRestrictedHomePage() {
+  if (isHomePage) {
+    quotaColl.forEach(el => {
+      var x = document.getElementById(el);
+      x.classList.remove('badge-success');
+      x.classList.add('badge-danger');
+      x.innerText = '1 Data Element';
+      x.innerText = '1 / Request';
+    })
+  }
 }
 // -- USER MODE UNRESTRICTED
-function userModeIsUnrestricted() {
-  quotaColl.forEach(el => {
-    var x = document.getElementById(el);
-    x.classList.remove('badge-danger');
-    x.classList.add('badge-success');
-    x.innerText = 'Max. / Request'
-  })
+function userModeIsUnrestrictedHomePage() {
+  if (isHomePage) {
+    quotaColl.forEach(el => {
+      var x = document.getElementById(el);
+      x.classList.remove('badge-danger');
+      x.classList.add('badge-success');
+      x.innerText = 'Max. / Request';
+    })
+  }
 }
 
 var btnAdblockRetry = document.getElementById('btn-adblock-retry');
@@ -86,7 +93,6 @@ if (btnAdblockRetry) {
     window.location.reload();
   })
 }
-
 
 var btnAdblockDismiss = document.getElementById('btn-adblock-dismiss');
 if (btnAdblockDismiss) {

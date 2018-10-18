@@ -1,4 +1,4 @@
-<h1> <%= message %> </h1>
+<!-- <h1> <%= message %> </h1>
 
 <h2>Cryptographic Data Array</h2>
 <ol>
@@ -8,4 +8,103 @@
 
     <% } %>
 </ol>
-<p> <%= collection %>  </p>
+<p> <%= collection %>  </p> -->
+
+<header class="hero" id="hero-guid">
+  <div class="wrapper-hero">
+    <div class="content">
+      <div class="title">
+        <h1 class="hero-heading">Unique ID</h1>
+        <img src="img/icon-reverse-finger9.png" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<%- include('partials/message-adblocker') %>
+
+<!-- check for user status on page load -->
+<%   %>
+
+<section class="section-lead bg-light">
+  <div class="container">
+    <h1 class="heading-3 text-center">Configure Data</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-3">
+        hello
+      </div>
+      <div class="col-md-9">
+        <fieldset>
+          <legend class="text-center">Select UUID Options</legend>
+          <form action="" method="POST">
+            <div class="form-group">
+              <select name="select-guid-count" id="select-guid-count" class="custom-select form-control-lg">
+                <option value="" selected disabled>How Many ... </option>
+                <option value="">1</option>
+                <option value="">25</option>
+                <option value="">100</option>
+                <option value="">500</option>
+                <option value="" disabled>1,000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="select-guid-format" id="" class="custom-select form-control-lg">
+                <option value="" selected disabled>Data Format ... </option>
+                <option value="">Dashes - ex: '45745c60-7b1a-11e8-9c9c-2d42b21b1a3e'</option>
+                <option value="">No Dashes - ex: '45745c607b1a11e89c9c2d42b21b1a3e'</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="select-json-format" id="" class="custom-select form-control-lg">
+                <option value="" selected disabled>Output Collection Format ... </option>
+                <option value="">Comma Delimited - ex: 45745c60- ..., 78373b42- ...</option>
+                <option value="">Array - ex: ["45745c60- ...", "78373b42- ..."]</option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
+              <select name="select-guid-output" id="" class="custom-select form-control-lg">
+                <option value="" selected disabled>Strength ... </option>
+                <option value="">RFC4122 v1</option>
+                <!-- <option value="" disabled>RFC4122 v3</option> -->
+                <option value="">RFC4122 v4</option>
+                <!-- <option value="" disabled>RFC4122 v5</option> -->
+              </select>
+            </div>
+            <div class="card text-white bg-info mb-3 card-info">
+              <div class="card-header"> <span><i class="fas fa-info-circle fa-2x"></i></span> Info
+                about selecting RFC4122 v1 UUID's </div>
+              <div class="card-body">
+                <h4 class="card-title">Does your data look the same?</h4>
+                <p class="card-text">When selecting RFC4122 v1 UUIDs, sometimes the data will
+                  appear to be identical. This is because v1 uses a timestamp-based architecture
+                  to generate the UUID. They often look similar because of how fast the UUIDs are
+                  generated. By looking at the 7th and/or 8th characters, you can verify that the
+                  UUIDs are indeed unique.</p>
+              </div>
+            </div>
+
+            <div class="recaptcha-wrapper mb-4">
+              <p class="lead text-center">beep. beep. <span><i class="fas fa-robot fa-2x"></i></span>
+                are you a Robot?</p>
+
+              <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <a href="#" class="btn btn-primary btn-lg btn-submit-main"> <i class="fas fa-thumbs-up fa-2x"></i>
+                  Submit Request</a>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="btn btn-primary btn-lg btn-submit-main"> <i class="fas fa-sync fa-2x"></i>
+                  Reset</a>
+              </div>
+            </div>
+          </form>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</section>
