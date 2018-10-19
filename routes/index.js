@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
 // GET test route for token
 router.get('/test', (req, res, next) => {
   var myToken, decodedToken, verifiedToken;
-  myToken = manageToken.fetchToken(true);
+  myToken = manageToken.fetchTokenAdblocker(true);
   decodedToken = manageToken.decodeToken(myToken);
   verifiedToken = manageToken.verifyToken(myToken);
 

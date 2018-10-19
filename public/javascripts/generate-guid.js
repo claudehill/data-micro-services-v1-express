@@ -17,11 +17,11 @@ function buildGuidArray(count, version, hasDashes, isJsonArrayOutput) {
   let ids = [];
   switch (version) {
     case 'v4':
-      ids = Array(count).fill().map(() => uuidv4());
+      ids = Array(count).fill().map(() => '\n', uuidv4());
       break;
     // add other versions here ...
     default:
-      ids = Array(count).fill().map(() => uuidv1());
+      ids = Array(count).fill().map(() => '\n' + uuidv1());
       break;
   }
 

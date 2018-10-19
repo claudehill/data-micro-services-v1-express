@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
+const manageToken = require('../public/javascripts/manage-token');
 const moment = require('moment');
 
 // since this is only a test, we're building the logic directly in the router, not JS
@@ -20,7 +21,7 @@ let mode = 'RESTRICTED'; // 'UNRESTRICTED'
 var userMode;
 var adBlocker;
 
-let bearerToken = {};
+let bearerToken;
 
 // return a token that has the value of adblocker
 router.post('/token-fetch', (req, res, next) => {
@@ -32,21 +33,9 @@ router.post('/token-fetch', (req, res, next) => {
     isAdblockDetected = req.body['adblocker'];
   }
   mode = (isAdblockDetected) ? 'RESTRICTED' : 'UNRESTRICTED';
-  console.log('mode ... ', mode )
-  console.log('req.body[adblocker] ... ', req.body['adblocker'] )
-  console.log('isAdblockDetected ... ', isAdblockDetected)
-
-  var tokenData = {
-    adblocker_detected: isAdblockDetected,
-    user_mode: mode
-  }
-  // expire token in 15 secs ...
-  jwt.sign({ tokenData: tokenData }, 'MY_SECRET', { expiresIn: 15 * 1000 },
-    (err, token) => {
-      bearerToken = { 'token': 'Bearer ' + token };
-      console.log('Request body entered POST /token-fetch as ...', req.body);
-      res.json({ message: 'response from globals ...', 'token': token, layout: false })
-    })
+  bearerToken = { 'token': 'Bearer ' + manageToken.fetchTokenAdblocker(isAdblockDetected) };
+  console.log('token response from manage-token ... ', bearerToken)
+  res.json({ message: 'response from globals ...', token: bearerToken })
 });
 
 

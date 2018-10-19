@@ -282,9 +282,17 @@ footer {
      overflow-y: scroll;
  }
 
+ .resultsTextArea {
+   min-height: 450px;
+   opacity: 0.9;
+   font-size: 1.2rem;
+   line-height: 1.2;
+   font-family: 'Courier New', Courier, monospace;
+ }
+
  .section-output {
   position: relative;
-  min-height: 400px;
+  min-height: 700px;
  }
 
  #output-data-guid{

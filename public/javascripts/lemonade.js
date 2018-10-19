@@ -16,6 +16,7 @@ var quotaColl =
 // var countGuid = document.getElementById('select-guid-count');
 var isHomePage = document.title.toLowerCase().includes('home');
 var isGuidPage = document.title.toLowerCase().includes('unique id');
+var selectMaxCount = document.getElementById('select-count');
 
 if (el) {
   adblockNotice.remove();
@@ -31,14 +32,15 @@ fetch('/globals/token-fetch', {
 })
   .then(res => { return res.json() })
   .then(res => {
-    console.log(res.message, res.token);
-    localStorage.setItem('token', res.token);
+    // console.log(res.message, res.token);
+    console.log('in lemonade file, token was ............ ', res.token);
+    localStorage.setItem('token', res.token['token']);
     console.log('from local storage ... ', localStorage.getItem('token'))
     return res.token;
   })
   .then(token => {
     var h = new Headers()
-    h.append('Authorization', 'Bearer ' + token)
+    h.append('Authorization', token['token'])
     fetch('/globals/token-verify', {
       method: 'POST',
       headers: h
@@ -52,19 +54,23 @@ fetch('/globals/token-fetch', {
         return res;
       })
       .then((res) => {
+        localStorage.removeItem('userMode');
+        localStorage.setItem('userMode', userMode);
+        
+        setMaxCountRestricted();
         switch (userMode) {
           case 'RESTRICTED':
-            userModeIsRestrictedHomePage();
+            userModeIsRestricted();
             break;
           case 'UNRESTRICTED':
-            userModeIsUnrestrictedHomePage();
+            userModeIsUnrestricted();
         }
       })
       .catch(err => console.log('** ERROR ** ', err))
   })
 
 // -- USER MODE RESTRICTED
-function userModeIsRestrictedHomePage() {
+function userModeIsRestricted() {
   if (isHomePage) {
     quotaColl.forEach(el => {
       var x = document.getElementById(el);
@@ -74,9 +80,10 @@ function userModeIsRestrictedHomePage() {
       x.innerText = '1 / Request';
     })
   }
+  setMaxCountRestricted();
 }
 // -- USER MODE UNRESTRICTED
-function userModeIsUnrestrictedHomePage() {
+function userModeIsUnrestricted() {
   if (isHomePage) {
     quotaColl.forEach(el => {
       var x = document.getElementById(el);
@@ -85,6 +92,7 @@ function userModeIsUnrestrictedHomePage() {
       x.innerText = 'Max. / Request';
     })
   }
+  setMaxCountUnrestricted();
 }
 
 var btnAdblockRetry = document.getElementById('btn-adblock-retry');
@@ -99,4 +107,25 @@ if (btnAdblockDismiss) {
   btnAdblockDismiss.addEventListener('click', () => {
     $('#adblock-notice').remove();
   });
+}
+
+function setMaxCountRestricted() {
+  // selectMaxCount.disabled = false;
+  // selectMaxCount.value = '1';
+  // selectMaxCount.disabled = true;
+  var options = selectMaxCount.getElementsByTagName('option');
+  options[2].disabled = 
+  options[3].disabled = 
+  options[4].disabled = 
+  options[5].disabled = true;
+  
+}
+
+function setMaxCountUnrestricted() {
+  // selectMaxCount.disabled = false;
+  selectMaxCount.value = 'select-option';
+}
+
+function hasSelectMaxCountDropdown() {
+  return (selectMaxCount) ? true : false;
 }
