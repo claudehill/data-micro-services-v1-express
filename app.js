@@ -39,12 +39,6 @@ app.use('/img', express.static(path.join(__dirname, 'public/images')));
 app.use('/css', express.static(path.join(__dirname, 'public/stylesheets')));
 
 
-/*
-
-app.all(/^\/main$/, function(req, res) { res.redirect('/main/'); });
-app.use('/main/',express.static(__dirname+'/public'));
-*/
-
 
 
 app.use('/', indexRouter);
