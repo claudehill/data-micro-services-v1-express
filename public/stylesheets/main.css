@@ -180,7 +180,8 @@ body {
 }
 
 .card button:hover {
-  background-color: rgb(202, 149, 2);
+  /* background-color: rgb(202, 149, 2); */
+  background-color: #bd6e2d;
 }
 
 .section-lead {
@@ -214,9 +215,12 @@ footer {
   background-image: url('../img/coffee-beans2.jpeg');
 }
 
+#hero-results {
+  background-image: url('../img/coffee-mug3.jpeg');
+}
+
 .hero {
   position: relative;
-  /* background-image: url('../img/cafe2.jpeg'); */
   height: 350px;
   width: 100%;
   background-size: cover;
@@ -273,7 +277,8 @@ footer {
 
  .btn-submit-main:hover,
  .btn-option-main:hover {
-     background-color: rgb(160, 119, 5);
+     /* background-color: rgb(160, 119, 5); */
+     background-color: #bd6e2d;
      color: #fff;
  }
 
@@ -306,6 +311,8 @@ footer {
      background-size: cover;
      background-repeat: no-repeat;
  }
+
+
 
  .overlay {
   top: 0;
@@ -345,6 +352,16 @@ footer {
 
  .bg-light {
    border: none !important;
+ }
+
+ #list-request {
+  list-style: none;
+  padding-left: 15px;
+  font-size: 1.2rem;
+ }
+
+ #list-request li i {
+  color: green;
  }
 
 

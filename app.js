@@ -16,6 +16,7 @@ const randomTextRouter = require('./routes/random-text');
 const randomJsonRouter = require('./routes/random-json');
 const jwtTestPageRouter = require('./routes/jwt-test');
 const globalRouter = require('./routes/globals');
+const resultsRouter = require('./routes/results');
 
 const app = express();
 
@@ -31,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/js', express.static(path.join(__dirname, 'public/javascripts')));
 app.use('/img', express.static(path.join(__dirname, 'public/images')));
@@ -45,6 +46,7 @@ app.use('/random-text', randomTextRouter);
 app.use('/random-json', randomJsonRouter);
 app.use('/jwt-test', jwtTestPageRouter);
 app.use('/globals', globalRouter);
+app.use('/results', resultsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -17,6 +17,9 @@ var quotaColl =
 var isHomePage = document.title.toLowerCase().includes('home');
 var isGuidPage = document.title.toLowerCase().includes('unique id');
 var selectMaxCount = document.getElementById('select-count');
+if (selectMaxCount) {
+  var options = selectMaxCount.getElementsByTagName('option');
+}
 
 if (el) {
   adblockNotice.remove();
@@ -109,21 +112,32 @@ if (btnAdblockDismiss) {
   });
 }
 
+
 function setMaxCountRestricted() {
-  // selectMaxCount.disabled = false;
+  if (selectMaxCount) {
+   selectMaxCount.disabled = false;
   // selectMaxCount.value = '1';
   // selectMaxCount.disabled = true;
-  var options = selectMaxCount.getElementsByTagName('option');
+
   options[2].disabled = 
   options[3].disabled = 
   options[4].disabled = 
-  options[5].disabled = true;
+  options[5].disabled = true;   
+  }
+
   
 }
 
 function setMaxCountUnrestricted() {
-  // selectMaxCount.disabled = false;
+  if (selectMaxCount) {
+      selectMaxCount.disabled = false;
+  options[2].disabled = 
+  options[3].disabled = 
+  options[4].disabled = false; 
+  // options[5].disabled = false; // <-- 1,000 reserved for logged in
   selectMaxCount.value = 'select-option';
+  }
+
 }
 
 function hasSelectMaxCountDropdown() {

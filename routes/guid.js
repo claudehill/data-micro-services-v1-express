@@ -13,10 +13,10 @@ router.get('/', (req, res, next) => {
 
 });
 
-router.post('/options', (req, res) => {
-  console.log('post to /guid ... ', req.body)
-  res.send('hello')
-  res.end();
+//TODO: add session variable to route and log
+router.post('/submit', (req, res, next) => {
+  console.log('post to /guid/submit ... ', req.body)
+  res.redirect('/results/guid')
 });
 
 module.exports = router;

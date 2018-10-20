@@ -9,6 +9,7 @@ const jwt = require('jsonwebtoken');
 var userMode;
 var adBlocker;
 
+//TODO: add session variable to route and log
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "x-access-token, token");
