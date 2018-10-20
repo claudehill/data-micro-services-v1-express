@@ -16,7 +16,7 @@ router.get('/', (req, res, next) => {
 //TODO: add session variable to route and log
 router.post('/submit', (req, res, next) => {
   console.log('post to /guid/submit ... ', req.body)
-  res.redirect('/results/guid')
+  res.redirect('/results/type')
 });
 
 module.exports = router;
