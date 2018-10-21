@@ -3,7 +3,7 @@ const uuidv1 = require('uuid/v1');
 const uuidv3 = require('uuid/v3'); // not implemented
 const uuidv4 = require('uuid/v4');
 const uuidv5 = require('uuid/v5'); // not implemented
-const manageToken = require('../javascripts/manage-token');
+const manageToken = require('./manage-token');
 
 let isJsonArrayOutput = false; // default... do we want ["x", "y"] array?
 let hasDashes = true; // default...

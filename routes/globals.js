@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
-const manageToken = require('../public/javascripts/manage-token');
+const manageToken = require('../js/manage-token');
 const moment = require('moment');
 
 // since this is only a test, we're building the logic directly in the router, not JS

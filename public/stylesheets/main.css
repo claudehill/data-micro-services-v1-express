@@ -360,8 +360,11 @@ footer {
   font-size: 1.2rem;
  }
 
- #list-request li i {
+ #list-request li i.fa-check-circle {
   color: green;
+ }
+ #list-request li i.fa-info-circle {
+  color: #007bff; 
  }
 
 

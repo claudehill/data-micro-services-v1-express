@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const randomTxt = require('../public/javascripts/generate-text');
+const randomTxt = require('../js/generate-text');
 
 router.get('/', (req, res, next) => {
   let msg = randomTxt.sayHello();

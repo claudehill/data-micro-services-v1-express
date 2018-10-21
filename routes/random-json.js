@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const randomJson = require('../public/javascripts/generate-random-json');
+const randomJson = require('../js/generate-random-json');
 
 router.get('/', (req, res, next) => {
   // var msg = 'Hello from random-json route';

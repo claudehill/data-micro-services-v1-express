@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const randomNbr = require('../public/javascripts/generate-random-number');
+const randomNbr = require('../js/generate-random-number');
 
 router.get('/', (req, res, next) => {
   var msg = randomNbr.sayHi();

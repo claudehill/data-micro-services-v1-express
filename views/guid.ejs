@@ -9,7 +9,7 @@
   </div>
 </header>
 
-<%- include('partials/message-adblocker') %>
+<!-- <%- include('partials/message-adblocker') %> -->
 
 <section class="section-lead bg-light">
   <div class="container">
@@ -24,8 +24,8 @@
         <fieldset>
           <legend class="text-center">Select UUID Options</legend>
           <form action="/guid/submit" method="post" enctype="application/x-www-form-urlencoded">
-            <div class="form-group">
-              <select name="select-guid-count" id="select-count" class="custom-select form-control-lg">
+            <div class="form-group has-success">
+              <select name="select-guid-count" id="select-count" class="custom-select form-control-lg" required>
                 <option value="select-option" selected disabled>How Many ... </option>
                 <option value="1">1</option>
                 <option value="25">25</option>
@@ -90,34 +90,3 @@
     </div>
   </div>
 </section>
-
-<!-- RESULTS -->
-
-<!-- <section class="section bg-dark text-white section-output" id="output-data-guid">
-  <div class="overlay">
-    <div class="container">
-      <div class="title">
-        <h2 class="heading-3 text-center text-white mb-4">Pickup Data Here</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="form-group">
-            <textarea class="form-control resultsTextArea">
-
-      <%= collection %>
-
-            </textarea>
-          </div>
-
-        </div>
-        <div class="col-md-4">
-          <button type="submit" class="btn btn-block btn-option-main"> <i class="far fa-copy fa-2x"></i>
-            <br>
-            Copy to Clipboard </button>
-          <button type="submit" class="btn btn-block btn-option-main"> <i class="fas fa-eraser fa-2x"></i>
-            <br> Clear </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->

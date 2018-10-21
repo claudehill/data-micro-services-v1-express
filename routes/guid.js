@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const util = require('util');
-const uuid = require('../public/javascripts/generate-guid');
-const manageToken = require('../public/javascripts/manage-token');
+const uuid = require('../js/generate-guid');
+const manageToken = require('../js/manage-token');
 const bp = require('body-parser');
+
 
 router.get('/', (req, res, next) => {
 
