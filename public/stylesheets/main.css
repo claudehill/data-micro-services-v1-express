@@ -189,7 +189,8 @@ body {
 }
 
 .section-lead p {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
+  font-size: 1.1rem;
 }
 
 
@@ -367,4 +368,22 @@ footer {
   color: #007bff; 
  }
 
+ .invalid-feedback, .recaptcha-msg {
+   font-size: 1.1rem;
+   font-weight: bold;
+ }
+
+ .ex-code {
+   background-color: #919aa1;
+   color: #fff;
+ }
+
+ select.is-invalid {
+  border: 2px solid #d9534f !important;
+ }
+
+ select.is-valid {
+   border: 2px solid #4BBF73 !important;
+   
+ }
 

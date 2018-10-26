@@ -17,46 +17,8 @@
     <hr>
     <div class="row">
       <div class="col-md-3">
-        hello
-        <%= message %>
-      </div>
-      <div class="col-md-9">
-        <fieldset>
-          <legend class="text-center">Select UUID Options</legend>
-          <form action="/guid/submit" method="post" enctype="application/x-www-form-urlencoded">
-            <div class="form-group has-success">
-              <select name="select-guid-count" id="select-count" class="custom-select form-control-lg" required>
-                <option value="select-option" selected disabled>How Many ... </option>
-                <option value="1">1</option>
-                <option value="25">25</option>
-                <option value="100">100</option>
-                <option value="500">500</option>
-                <option value="1000" disabled>1,000</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <select name="select-guid-format" id="" class="custom-select form-control-lg">
-                <option value="" selected disabled>Data Format ... </option>
-                <option value="guid-dashes">Dashes - ex: '45745c60-7b1a-11e8-9c9c-2d42b21b1a3e'</option>
-                <option value="guid-no-dashes">No Dashes - ex: '45745c607b1a11e89c9c2d42b21b1a3e'</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <select name="select-json-format" id="" class="custom-select form-control-lg">
-                <option value="" selected disabled>Output Collection Format ... </option>
-                <option value="guid-comma">Comma Delimited - ex: 45745c60- ..., 78373b42- ...</option>
-                <option value="guid-array">Array - ex: ["45745c60- ...", "78373b42- ..."]</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <select name="select-guid-output" id="" class="custom-select form-control-lg">
-                <option value="" selected disabled>Cryptographic Strength ... </option>
-                <option value="guid-strength-v1">RFC4122 v1</option>
-                <option value="guid-strength-v4">RFC4122 v4</option>
-              </select>
-            </div>
-            <div class="card text-white bg-info mb-3 card-info">
+        hello <%= message %>
+            <!-- <div class="card text-white bg-info mb-3 card-info">
               <div class="card-header"> <span><i class="fas fa-info-circle fa-2x"></i></span> Info
                 about selecting RFC4122 v1 UUID's </div>
               <div class="card-body">
@@ -67,21 +29,78 @@
                   generated. By looking at the 7th and/or 8th characters, you can verify that the
                   UUIDs are indeed unique.</p>
               </div>
+            </div> -->
+      </div>
+      <div class="col-md-9">
+        <fieldset>
+          <legend class="text-center">Select UUID Options</legend>
+          <form action="/guid/submit" method="post" enctype="application/x-www-form-urlencoded" class="was-validated">
+            <div class="form-group">
+              <select name="select-guid-count" id="select-guid-count" class="custom-select form-control-lg">
+                <option value="select-count" selected disabled>Select Count</option>
+                <option value="1">1</option>
+                <option value="25">25</option>
+                <option value="100">100</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-select-guid-count"> Sorry, an error occured. Try again?</div>
             </div>
+
+            <div class="form-group">
+              <select name="select-guid-format" id="select-guid-format" class="custom-select form-control-lg">
+                <option value="select-format" selected disabled>Select Data Format </option>
+                <option value="guid-dashes">Dashes - ex: '45745c60-7b1a-11e8-9c9c-2d42b21b1a3e'</option>
+                <option value="guid-no-dashes">No Dashes - ex: '45745c607b1a11e89c9c2d42b21b1a3e'</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-select-guid-format"> Sorry, an error occured. Try again?</div>
+            </div>
+            <div class="form-group">
+              <select name="select-guid-output-format" id="select-guid-output-format" class="custom-select form-control-lg">
+                <option value="select-output" selected disabled>Select Output Collection Format</option>
+                <option value="guid-comma">Comma Delimited - ex: 45745c60- ..., 78373b42- ...</option>
+                <option value="guid-array">Array - ex: ["45745c60- ...", "78373b42- ..."]</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-select-guid-output-format"> Sorry, an error occured. Try again?</div>
+            </div>
+
+            <div class="form-group">
+              <select name="select-guid-strength" id="select-guid-strength" class="custom-select form-control-lg">
+                <option value="select-strength" selected disabled>Select Cryptographic Strength</option>
+                <option value="guid-strength-v1">RFC4122 v1</option>
+                <option value="guid-strength-v4">RFC4122 v4</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-select-guid-strength"> Sorry, an error occured. Try again?</div>
+            </div>
+
+            <!-- <div class="mb-4" id="example-code">
+              <h4 class="mt-4 mb-4 text-center">Example Output</h4>
+              <p class="text-center"> <strong><a href="#!" onclick="getPrefetchData();return false">Click here</a></strong> to see what your data will look like</p>
+                <pre class="ex-code pt-4 pb-4 text-center">1234-56789</pre>
+            </div> -->
+            <!-- <div class="card text-white bg-info mb-3 card-info">
+              <div class="card-header"> <span><i class="fas fa-info-circle fa-2x"></i></span> Info
+                about selecting RFC4122 v1 UUID's </div>
+              <div class="card-body">
+                <h4 class="card-title">Does your data look the same?</h4>
+                <p class="card-text">When selecting RFC4122 v1 UUIDs, sometimes the data will
+                  appear to be identical. This is because v1 uses a timestamp-based architecture
+                  to generate the UUID. They often look similar because of how fast the UUIDs are
+                  generated. By looking at the 7th and/or 8th characters, you can verify that the
+                  UUIDs are indeed unique.</p>
+              </div>
+            </div> -->
             <div class="recaptcha-wrapper mb-4">
               <p class="lead text-center">beep. beep. <span><i class="fas fa-robot fa-2x"></i></span>
                 are you a Robot?</p>
-              <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+              <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+              <div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LfksnYUAAAAAIbzVm7f4NH7_3PZJvpdF-GlsaBv"></div>
+             <div id="g-recaptcha-msg" class="text-center recaptcha-msg">&nbsp;</div>
             </div>
             <div class="row">
               <div class="col-md-8">
-                <!-- <a href="#" class="btn btn-primary btn-lg btn-submit-main"> <i class="fas fa-thumbs-up fa-2x"></i>
-                  Submit Request</a> -->
-                  <button type="submit" class="btn btn-primary btn-lg btn-submit-main btn-block"> <i class="fas fa-thumbs-up fa-2x"></i> Submit Request </button>
+                  <button type="submit" class="btn btn-primary btn-lg btn-submit-main btn-block" id="submit-page-data"> <i class="fas fa-thumbs-up fa-2x"></i> Submit Request </button>
               </div>
               <div class="col-md-4">
-                <a href="#" class="btn btn-primary btn-lg btn-submit-main"> <i class="fas fa-sync fa-2x"></i>
-                  Reset</a>
+                  <button type="submit" class="btn btn-primary btn-lg btn-submit-main btn-block" id="reset-page-data"> <i class="fas fa-sync fa-2x"></i> Reset Form</button>
               </div>
             </div>
           </form>
@@ -90,3 +109,5 @@
     </div>
   </div>
 </section>
+
+<script src="/js/lightroast.js"></script>

@@ -16,12 +16,12 @@ var quotaColl =
 // var countGuid = document.getElementById('select-guid-count');
 var isHomePage = document.title.toLowerCase().includes('home');
 var isGuidPage = document.title.toLowerCase().includes('unique id');
-var selectMaxCount = document.getElementById('select-count');
-if (selectMaxCount) {
-  var options = selectMaxCount.getElementsByTagName('option');
-}
+// var selectMaxCount = document.getElementById('select-count');
+// if (selectMaxCount) {
+//   var options = selectMaxCount.getElementsByTagName('option');
+// }
 
-if (el) {
+if (el && adblockNotice) {
   adblockNotice.remove();
 }
 
@@ -36,7 +36,7 @@ fetch('/globals/token-fetch', {
   .then(res => { return res.json() })
   .then(res => {
     // console.log(res.message, res.token);
-    console.log('in lemonade file, token was ............ ', res.token);
+    console.log('in darkroast file, token was ............ ', res.token);
     localStorage.setItem('token', res.token['token']);
     console.log('from local storage ... ', localStorage.getItem('token'))
     return res.token;
@@ -60,7 +60,7 @@ fetch('/globals/token-fetch', {
         localStorage.removeItem('userMode');
         localStorage.setItem('userMode', userMode);
         
-        setMaxCountRestricted();
+        // setMaxCountRestricted();
         switch (userMode) {
           case 'RESTRICTED':
             userModeIsRestricted();
@@ -83,7 +83,7 @@ function userModeIsRestricted() {
       x.innerText = '1 / Request';
     })
   }
-  setMaxCountRestricted();
+  // setMaxCountRestricted();
 }
 // -- USER MODE UNRESTRICTED
 function userModeIsUnrestricted() {
@@ -95,7 +95,7 @@ function userModeIsUnrestricted() {
       x.innerText = 'Max. / Request';
     })
   }
-  setMaxCountUnrestricted();
+  // setMaxCountUnrestricted();
 }
 
 var btnAdblockRetry = document.getElementById('btn-adblock-retry');
@@ -110,36 +110,4 @@ if (btnAdblockDismiss) {
   btnAdblockDismiss.addEventListener('click', () => {
     $('#adblock-notice').remove();
   });
-}
-
-
-function setMaxCountRestricted() {
-  if (selectMaxCount) {
-   selectMaxCount.disabled = false;
-  // selectMaxCount.value = '1';
-  // selectMaxCount.disabled = true;
-
-  options[2].disabled = 
-  options[3].disabled = 
-  options[4].disabled = 
-  options[5].disabled = true;   
-  }
-
-  
-}
-
-function setMaxCountUnrestricted() {
-  if (selectMaxCount) {
-      selectMaxCount.disabled = false;
-  options[2].disabled = 
-  options[3].disabled = 
-  options[4].disabled = false; 
-  // options[5].disabled = false; // <-- 1,000 reserved for logged in
-  selectMaxCount.value = 'select-option';
-  }
-
-}
-
-function hasSelectMaxCountDropdown() {
-  return (selectMaxCount) ? true : false;
 }

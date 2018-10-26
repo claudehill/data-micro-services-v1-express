@@ -3,6 +3,8 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const manageToken = require('../js/manage-token');
 const moment = require('moment');
+const axios = require('axios');
+const request = require('request');
 
 // since this is only a test, we're building the logic directly in the router, not JS
 const jwt = require('jsonwebtoken');
@@ -43,7 +45,7 @@ router.post('/token-verify', verifyToken, (req, res) => {
 
   // console.log('logging req headers in /token-test route ... ', req.headers)
   // res.setHeader("Access-Control-Allow-Headers", "x-access-token, token");
-  
+
   jwt.verify(req.token, 'MY_SECRET', (err, authData) => {
     if (err) {
       userMode = 'RESTRICTED';
@@ -56,6 +58,53 @@ router.post('/token-verify', verifyToken, (req, res) => {
     }
   })
 });
+
+
+//TODO: *** REMOVE PRIVATE KEY ***
+router.post('/recaptcha-verify', (req, res) => {
+  //6LfksnYUAAAAAIyh2ZuhK63mAw94lPITjFcj-Q-G
+
+  if (req.body.captcha === undefined ||
+    req.body.captcha === '' ||
+    req.body.captcha === null) {
+    return res.json({ "success": false, "msg": "please select captcha" })
+  }
+
+  // Secret Key
+  // const secretKey = '6LfksnYUAAAAAIyh2ZuhK63mAw94lPITjFcj-Q-G';
+  const secretKey = process.env.RECAPTCHA_KEY;
+
+  // verifyUrl
+  const verifyUrl = `https://google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body.captcha}&remoteip=${req.connection.remoteAddress}`;
+
+  // Make request to VerifyUrl
+  request(verifyUrl, (err, response, body) => {
+    body = JSON.parse(body);
+
+    // If NOT successful
+    if (body.success !== undefined && !body.success) {
+      console.log('the body was ................. >>> ', body)
+      return res.json({ "success": false, "msg": "failed captcha verification" });
+    }
+
+    // If successful
+    console.log('the body was ................. >>> ', body)
+    return res.json({ "success": true, "msg": "captcha passed" });
+  })
+
+});
+
+//TODO: *** REMOVE PRIVATE KEY ***
+// middleware to validate recaptcha token
+// function verifyRecaptcha(req, res, next) {
+//   // return { message: 'hello' }
+//   console.log(' >>>>>>>>>>>>>>>>> HELLO ');
+//   next();
+// }
+
+
+
+
 
 
 // format of token
@@ -76,5 +125,6 @@ function verifyToken(req, res, next) {
     // dont send anything ... look for undefined ...
   }
 }
+
 
 module.exports = router;
