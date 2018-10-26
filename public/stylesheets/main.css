@@ -301,19 +301,11 @@ footer {
   min-height: 700px;
  }
 
- #output-data-guid{
+ #section-results-output{
      background: url('../img/coffee-mug6.jpeg');
      background-size: cover;
      background-repeat: no-repeat;
  }
-
- #output-data-random-number {
-     background: url('../img/coffee-mug3.jpeg');
-     background-size: cover;
-     background-repeat: no-repeat;
- }
-
-
 
  .overlay {
   top: 0;

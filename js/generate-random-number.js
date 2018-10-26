@@ -13,6 +13,7 @@ exports.createRandomInt = createRandomInt;
 exports.createRandomNumber = createRandomNumber;
 exports.createRandomNumberMultiple = createRandomNumberMultiple;
 exports.createRandomAlphaSpecialChars = createRandomAlphaSpecialChars;
+exports.getSessionKey = getSessionKey;
 
 
 function createRandomInt(length) {
@@ -65,4 +66,8 @@ function createCryptoString(length) {
 
 function sayHello() {
   return 'Hello from Random Number JS file ...';
+}
+
+function getSessionKey() {
+  return cryptoRandomString(16);
 }

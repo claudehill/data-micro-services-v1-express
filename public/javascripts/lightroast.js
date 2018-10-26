@@ -14,7 +14,6 @@ const selectStrengthError = document.getElementById('invalid-select-guid-strengt
 const msgRequired = '<i class="fas fa-exclamation-triangle"></i>  This is a required field.';
 const msgCaptchaError = '<i class="fas fa-exclamation-triangle"></i>  Recaptcha error: ';
 const msgCaptchaSuccess = '<i class="far fa-check-circle"></i>  Recaptcha status: ';
-
 const gRecaptchaElement = document.getElementById('g-recaptcha');
 
 let selectCountValue;
@@ -22,11 +21,7 @@ let selectFormatValue;
 let selectFormatOutputValue;
 let selectStrengthValue;
 let isRecaptchaValid = false;
-
 let isErrorState = false;
-// find element
-// add event listener for click / submit button
-// validate form
 
 if (selectCount) {
   var selectCountOptions = selectCount.getElementsByTagName('option');
@@ -46,13 +41,7 @@ $(document).ready(() => {
 
   btnSubmit.addEventListener('click', (e) => {
     validateOptions(e);
-    // validateRecaptcha();
   });
-  // btnSubmit.addEventListener('submit', (e) => {
-  //   validateOptions(e);
-  //   validateRecaptcha();
-  // });
-
 });
 
 function resetErrorState() {
@@ -77,7 +66,6 @@ function setMaxCountUnrestricted() {
 }
 
 function validateOptions(e) {
-  // no option selected ... 
 
   if (selectCount.value === 'select-count') {
     selectCount.classList.add('is-invalid')

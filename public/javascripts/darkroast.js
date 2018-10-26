@@ -15,7 +15,6 @@ var quotaColl =
     'user-quota-json'];
 // var countGuid = document.getElementById('select-guid-count');
 var isHomePage = document.title.toLowerCase().includes('home');
-var isGuidPage = document.title.toLowerCase().includes('unique id');
 // var selectMaxCount = document.getElementById('select-count');
 // if (selectMaxCount) {
 //   var options = selectMaxCount.getElementsByTagName('option');
@@ -69,7 +68,7 @@ fetch('/globals/token-fetch', {
             userModeIsUnrestricted();
         }
       })
-      .catch(err => console.log('** ERROR ** ', err))
+      .catch(err => console.error('** ERROR ** ', err))
   })
 
 // -- USER MODE RESTRICTED
@@ -111,3 +110,18 @@ if (btnAdblockDismiss) {
     $('#adblock-notice').remove();
   });
 }
+
+fetch('/globals/session-id', { 
+
+  method: 'GET',
+  headers: {
+    'Accept': 'application/json, text/plain, */*',
+    'Content-Type': 'application/json'
+  }
+ })
+ .then(res => { return res.json() })
+ .then(data => {
+
+   console.info('data', data) 
+   sessionStorage.setItem('sessionId', JSON.stringify(data))
+  })

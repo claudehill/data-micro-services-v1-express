@@ -5,25 +5,21 @@ const manageToken = require('../js/manage-token');
 const moment = require('moment');
 const axios = require('axios');
 const request = require('request');
+const randomNbr = require('../js/generate-random-number');
 
 // since this is only a test, we're building the logic directly in the router, not JS
 const jwt = require('jsonwebtoken');
 
-// this goes in environment variable for system
-// EXAMPLE: process.env.SECRET_KEY = "my_cool_secret_key";
-// or USE DOT ENV ... store
-let secretPhrase = 'every villain is lemons';
 /*
 var token = req.body.token || req.headers['token']
 user has 2 options to pass through... body or headers
 */
 let isAdblockDetected = true;
 let mode = 'RESTRICTED'; // 'UNRESTRICTED'
-
-var userMode;
-var adBlocker;
-
+let userMode;
+let adBlocker;
 let bearerToken;
+let sessionKey;
 
 // return a token that has the value of adblocker
 router.post('/token-fetch', (req, res, next) => {
@@ -90,26 +86,17 @@ router.post('/recaptcha-verify', (req, res) => {
     // If successful
     console.log('the body was ................. >>> ', body)
     return res.json({ "success": true, "msg": "captcha passed" });
-  })
-
+  });
 });
 
-//TODO: *** REMOVE PRIVATE KEY ***
-// middleware to validate recaptcha token
-// function verifyRecaptcha(req, res, next) {
-//   // return { message: 'hello' }
-//   console.log(' >>>>>>>>>>>>>>>>> HELLO ');
-//   next();
-// }
-
-
-
-
-
+// use with receipt functions
+router.get('/session-id', (req, res) => {
+  var key = sessionKey = randomNbr.getSessionKey();
+  return res.json({ sessionId: key, timestamp: moment().format(), timestring: moment().format('MMMM Do YYYY, h:mm:ss a') })
+});
 
 // format of token
 // authorization: Bearer <access_token>
-
 // verify token ...
 function verifyToken(req, res, next) {
   const bearerHeader = req.headers['authorization'];
