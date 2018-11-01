@@ -17,6 +17,7 @@
 
 <%- include('partials/results-output') %>
 
+
 <script>
   $(document).ready(() => {
     $('#section-results-receipt').hide()
@@ -25,9 +26,39 @@
       $('#section-loading').hide();
       $('#section-results-receipt').show();
       $('#section-results-output').show();
-    }, 4000);
+      // console.log('in ejs ... ', JSON.parse(sessionStorage.sessionId).sessionId)
+      getReceiptForSessionId();
+      getResultsForSessionId();
+    }, 5000);
 
-  })
+    var h = {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    }
+
+    function getReceiptForSessionId() {
+      fetch('/results/receipt/' + JSON.parse(sessionStorage.sessionId).sessionId, {
+        method: 'GET',
+        headers: h
+      })
+        .then(res => { return res.json() })
+        .then(data => {
+          console.log(' >>> RESPONSE FROM >>> ', data)
+        })
+    }
+
+    function getResultsForSessionId() {
+      fetch('/results/output/' + JSON.parse(sessionStorage.sessionId).sessionId, {
+        method: 'GET',
+        headers: h
+      })
+        .then(res => { return res.json() })
+        .then(data => {
+          console.log(' >>> RESULTS ROUTE  ', data)
+        })
+
+    }
 
 
+  });
 </script>

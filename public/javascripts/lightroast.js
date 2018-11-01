@@ -22,6 +22,7 @@ let selectFormatOutputValue;
 let selectStrengthValue;
 let isRecaptchaValid = false;
 let isErrorState = false;
+let sessionId; 
 
 if (selectCount) {
   var selectCountOptions = selectCount.getElementsByTagName('option');
@@ -41,6 +42,8 @@ $(document).ready(() => {
 
   btnSubmit.addEventListener('click', (e) => {
     validateOptions(e);
+    // 1. append variable to form  & submit ... 
+    appendSessionData();
   });
 });
 
@@ -107,13 +110,26 @@ function validateOptions(e) {
     (e) => { return true; }
   }
 
+  //TODO: -- UNCOMMENT RECAPTCHA VALIATION
   if (validateRecaptcha()) {
     e.preventDefault();
   } else {
     (e) => { return true; }
   }
+
   console.log('isRecaptchaValid', isRecaptchaValid)
 }
+
+function appendSessionData() {
+  if (sessionStorage.sessionId) {
+    var sid = JSON.parse(sessionStorage.sessionId).sessionId; // pass this on post
+    $('#form-guid').append( "<input type='hidden' name='session-data' value='" + sessionStorage.sessionId +  "' />" );
+    return true;
+  }
+  return false;
+}
+
+
 
 function validateRecaptcha() {
   const captcha = document.querySelector('#g-recaptcha-response').value;

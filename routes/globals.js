@@ -6,6 +6,7 @@ const moment = require('moment');
 const axios = require('axios');
 const request = require('request');
 const randomNbr = require('../js/generate-random-number');
+const utils = require('../js/utils');
 
 // since this is only a test, we're building the logic directly in the router, not JS
 const jwt = require('jsonwebtoken');
@@ -58,7 +59,6 @@ router.post('/token-verify', verifyToken, (req, res) => {
 
 //TODO: *** REMOVE PRIVATE KEY ***
 router.post('/recaptcha-verify', (req, res) => {
-  //6LfksnYUAAAAAIyh2ZuhK63mAw94lPITjFcj-Q-G
 
   if (req.body.captcha === undefined ||
     req.body.captcha === '' ||
@@ -67,7 +67,6 @@ router.post('/recaptcha-verify', (req, res) => {
   }
 
   // Secret Key
-  // const secretKey = '6LfksnYUAAAAAIyh2ZuhK63mAw94lPITjFcj-Q-G';
   const secretKey = process.env.RECAPTCHA_KEY;
 
   // verifyUrl
@@ -91,8 +90,7 @@ router.post('/recaptcha-verify', (req, res) => {
 
 // use with receipt functions
 router.get('/session-id', (req, res) => {
-  var key = sessionKey = randomNbr.getSessionKey();
-  return res.json({ sessionId: key, timestamp: moment().format(), timestring: moment().format('MMMM Do YYYY, h:mm:ss a') })
+  return res.json({ sessionId: utils.getSessionId(), timestamp: moment().format(), timestring: moment().format('MMMM Do YYYY, h:mm:ss a') })
 });
 
 // format of token

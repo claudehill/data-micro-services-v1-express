@@ -1,0 +1,28 @@
+{
+  "fb6ae04ff2dd3b77": {
+    "sessionId": "fb6ae04ff2dd3b77",
+    "count": "1",
+    "strength": "guid-strength-v4",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-array",
+    "sessionInfo": {
+      "sessionId": "fb6ae04ff2dd3b77",
+      "timestamp": "2018-10-29T17:37:48-04:00",
+      "timestring": "October 29th 2018, 5:37:48 pm"
+    }
+  },
+  "eecc4b502bda59d7": {
+    "sessionId": "eecc4b502bda59d7",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-array",
+    "sessionInfo": {
+      "sessionId": "eecc4b502bda59d7",
+      "timestamp": "2018-11-01T18:57:19-04:00",
+      "timestring": "November 1st 2018, 6:57:19 pm"
+    }
+  }
+}

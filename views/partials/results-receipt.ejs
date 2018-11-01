@@ -5,12 +5,16 @@
         <div class="col-md-6">
           <h4>You asked for ...</h4>
           <ul id="list-request" class="list-request">
-            <li> <i class="fas fa-check-circle"></i> UUID / Guid</li>
-            <li> <i class="fas fa-check-circle"></i> Cryptographic Strength of XXX</li>
-            <li> <i class="fas fa-check-circle"></i> Count of 1 (adblocker)</li>
-            <li> <i class="fas fa-check-circle"></i> Include Dashes</li>
-            <li> <i class="fas fa-info-circle"></i> Date / Time: XX/XX/XX ...</li>
-            <li> <i class="fas fa-info-circle"></i> Session ID: 123456789</li>
+
+            <li> <i class="fas fa-check-circle"></i> DataType:  <span id="rct-type"><%= receipt.type.toUpperCase() %> </span> </li>
+            <li> <i class="fas fa-check-circle"></i> Count: <span id="rct-count"></span> <%= receipt.count %></li>
+            <li> <i class="fas fa-check-circle"></i> Data Format: <span id="rct-data-format"><%= receipt.format %> </span> </li>
+            <li> <i class="fas fa-check-circle"></i> Output Format: <span id="rct-op-format"><%= receipt.formatColl %></span>  </li>
+
+            <li> <i class="fas fa-check-circle"></i> Other Details: <span id="rct-details"> <%= receipt.strength %> </span> </li>
+            <hr>
+            <li> <i class="fas fa-info-circle"></i> Request ID: <%= receipt.sessionId %> </li>
+            <li> <i class="fas fa-info-circle"></i> Date/Time: <%= receipt.sessionInfo.timestring %> </li>
           </ul>
         </div>
         <div class="col-md-6">
