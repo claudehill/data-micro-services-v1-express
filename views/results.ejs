@@ -10,13 +10,11 @@
   </div>
 </header>
 
-
 <%- include('partials/loading') %>
 
 <%- include('partials/results-receipt') %>
 
 <%- include('partials/results-output') %>
-
 
 <script>
 
@@ -27,6 +25,7 @@
   var elDetails = document.getElementById('rct-details');
   var elReqId = document.getElementById('rct-id');
   var elDateTime = document.getElementById('rct-datetime');
+  var txtOutput = document.getElementById('results-output')
 
   $(document).ready(() => {
     $('#section-results-receipt').hide()
@@ -61,7 +60,6 @@
           elReqId.innerText = data.receipt.sessionInfo.sessionId;
           elDateTime.innerText = data.receipt.sessionInfo.timestring;
           elDetails.innerText = data.receipt.strength;
-
           console.log(' >>> RESPONSE FROM >>> ', data.receipt)
         })
     }
@@ -74,6 +72,7 @@
         .then(res => { return res.json() })
         .then(data => {
           console.log(' >>> RESULTS ROUTE  ', data)
+          txtOutput.innerHTML = data.results;
         })
 
     }

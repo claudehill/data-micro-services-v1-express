@@ -30,16 +30,18 @@ router.get('/:session', (req, res, next) => {
   console.log('SESSION was .... ', session)
   console.log('STORAGE OBJECT was .... ', storageObj)
 
+  //TODO: remove this? just render page then re-call function
   // here, convert to string obj
-  if (!isConvertedStringFormat) {
-    modifiedObj = convertToStringFormat(sessionObj)
-  }
+  // if (!isConvertedStringFormat) {
+  //   modifiedObj = convertToStringFormat(sessionObj)
+  // }
  
   console.log('modified object (SESSION METHOD) ... ', modifiedObj)
 
   // genGuid.lookupGuidOptions(session)
 
-  res.render('results', { receipt: storageObj })
+  // res.render('results', { receipt: storageObj })
+  res.render('results')
 });
 
 // wait until page loaded, then get receipt via post
@@ -58,7 +60,6 @@ router.get('/receipt/:id', (req, res, next) => {
   }  
   console.log('modified object (RECEIPT ID METHOD) ... ', modifiedObj)
 
-
   // send as receipt
   console.log('modified object was ... ', modifiedObj)
   console.log('sessionID was .... ', sessionId)
@@ -67,8 +68,11 @@ router.get('/receipt/:id', (req, res, next) => {
 });
 
 router.get('/output/:id', (req, res, next) => {
-
-  res.json({ 'msg': 'hello from results route ...' })
+  var sessionId = req.params.id;
+  var sessionObj = localStorage.getItem(sessionId);
+  console.log('SESSION OBJECT ... ', sessionObj)
+  var results = utils.routeObjectByType(sessionObj);
+  res.json({ results: results })
 });
 
 function convertToStringFormat(obj) {

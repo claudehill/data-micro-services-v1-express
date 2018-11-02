@@ -193,5 +193,18 @@
       "timestamp": "2018-11-02T05:28:06-04:00",
       "timestring": "November 2nd 2018, 5:28:06 am"
     }
+  },
+  "80ba7ac9f7da24cb": {
+    "sessionId": "80ba7ac9f7da24cb",
+    "count": "1",
+    "strength": "guid-strength-v4",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "guid-array",
+    "sessionInfo": {
+      "sessionId": "80ba7ac9f7da24cb",
+      "timestamp": "2018-11-02T05:59:01-04:00",
+      "timestring": "November 2nd 2018, 5:59:01 am"
+    }
   }
 }

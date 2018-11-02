@@ -14,6 +14,7 @@ let storageObj;
 exports.createArray = buildGuidArray;
 exports.sayHi = sayHello;
 exports.lookupGuidOptions = lookupGuidOptions;
+exports.buildGuidArrayFromOptions = buildGuidArrayFromOptions;
 
 function lookupGuidOptions(storageId) {
   console.log('in generate-guid file/ lookupGuidOptions()... ID ', storageId)
@@ -21,11 +22,21 @@ function lookupGuidOptions(storageId) {
 
   storageObj = localStorage.getItem(storageId)
 
-    console.log('in generate-guid file/ lookupGuidOptions()... storageObj ', storageObj)
+  console.log('in generate-guid file/ lookupGuidOptions()... storageObj ', storageObj)
 
   return storageObj;
+}
 
-
+function buildGuidArrayFromOptions(obj) {
+  var s = {};
+  s.count = obj.count;
+  console.log('BUILD GUID METHOD OBJ ... ', obj)
+  s.version = (obj.strength === 'guid-strength-v4') ? 'v4' : 'v1';
+  s.hasDashes = obj.format === 'guid-dashes';
+  console.log('DASHES WERE S ... ', s.hasDashes)
+  s.isJsonArrayOutput = obj.formatColl = 'guid-array';
+  console.log('BUILD GUID ARRAY OP ... ', buildGuidArray(s.count, s.version, s.hasDashes, s.isJsonArrayOutput))
+  return buildGuidArray(s.count, s.version, s.hasDashes, s.isJsonArrayOutput);
 }
 
 // example ... 
@@ -35,11 +46,11 @@ function buildGuidArray(count, version, hasDashes, isJsonArrayOutput) {
   let ids = [];
   switch (version) {
     case 'v4':
-      ids = Array(count).fill().map(() => '\n', uuidv4());
+      ids = Array(count).fill().map(() => uuidv4());
       break;
     // add other versions here ...
     default:
-      ids = Array(count).fill().map(() => '\n' + uuidv1());
+      ids = Array(count).fill().map(() => uuidv1());
       break;
   }
 
