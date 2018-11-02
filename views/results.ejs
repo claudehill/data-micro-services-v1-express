@@ -19,6 +19,15 @@
 
 
 <script>
+
+  var elCount = document.getElementById('rct-count');
+  var elType = document.getElementById('rct-type');
+  var elDataFormat = document.getElementById('rct-data-format');
+  var elOpFormat = document.getElementById('rct-op-format');
+  var elDetails = document.getElementById('rct-details');
+  var elReqId = document.getElementById('rct-id');
+  var elDateTime = document.getElementById('rct-datetime');
+
   $(document).ready(() => {
     $('#section-results-receipt').hide()
     $('#section-results-output').hide()
@@ -31,24 +40,34 @@
       getResultsForSessionId();
     }, 5000);
 
+    var id = JSON.parse(sessionStorage.sessionId).sessionId;
     var h = {
       'Accept': 'application/json, text/plain, */*',
       'Content-Type': 'application/json'
     }
 
     function getReceiptForSessionId() {
-      fetch('/results/receipt/' + JSON.parse(sessionStorage.sessionId).sessionId, {
+      fetch('/results/receipt/' + id, {
         method: 'GET',
         headers: h
       })
         .then(res => { return res.json() })
         .then(data => {
-          console.log(' >>> RESPONSE FROM >>> ', data)
+          // populate the GUI with the results ...
+          elCount.innerText = data.receipt.count;
+          elType.innerText = data.receipt.type;
+          elDataFormat.innerText = data.receipt.format;
+          elOpFormat.innerText = data.receipt.formatColl;
+          elReqId.innerText = data.receipt.sessionInfo.sessionId;
+          elDateTime.innerText = data.receipt.sessionInfo.timestring;
+          elDetails.innerText = data.receipt.strength;
+
+          console.log(' >>> RESPONSE FROM >>> ', data.receipt)
         })
     }
 
     function getResultsForSessionId() {
-      fetch('/results/output/' + JSON.parse(sessionStorage.sessionId).sessionId, {
+      fetch('/results/output/' + id, {
         method: 'GET',
         headers: h
       })

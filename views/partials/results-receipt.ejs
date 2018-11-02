@@ -2,22 +2,22 @@
     <div class="container">
       <h1 class="text-center mb-4">Your Receipt</h1>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
           <h4>You asked for ...</h4>
           <ul id="list-request" class="list-request">
 
-            <li> <i class="fas fa-check-circle"></i> DataType:  <span id="rct-type"><%= receipt.type.toUpperCase() %> </span> </li>
-            <li> <i class="fas fa-check-circle"></i> Count: <span id="rct-count"></span> <%= receipt.count %></li>
-            <li> <i class="fas fa-check-circle"></i> Data Format: <span id="rct-data-format"><%= receipt.format %> </span> </li>
-            <li> <i class="fas fa-check-circle"></i> Output Format: <span id="rct-op-format"><%= receipt.formatColl %></span>  </li>
+            <li> <i class="fas fa-check-circle"></i> DataType:  <span id="rct-type"> Type </span> </li>
+            <li> <i class="fas fa-check-circle"></i> Count: <span id="rct-count"> 0 </span> </li>
+            <li> <i class="fas fa-check-circle"></i> Data Format: <span id="rct-data-format"> ? </span> </li>
+            <li> <i class="fas fa-check-circle"></i> Output Format: <span id="rct-op-format"> ? </span>  </li>
 
-            <li> <i class="fas fa-check-circle"></i> Other Details: <span id="rct-details"> <%= receipt.strength %> </span> </li>
+            <li> <i class="fas fa-check-circle"></i> Other Details: <span id="rct-details"> ? </span> </li>
             <hr>
-            <li> <i class="fas fa-info-circle"></i> Request ID: <%= receipt.sessionId %> </li>
-            <li> <i class="fas fa-info-circle"></i> Date/Time: <%= receipt.sessionInfo.timestring %> </li>
+            <li> <i class="fas fa-info-circle"></i> Request ID: <span id="rct-id"> ? </span>  </li>
+            <li> <i class="fas fa-info-circle"></i> Date/Time:  <span id="rct-datetime"> ? </span>  </li>
           </ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           hello there
         </div>
       </div>

@@ -35,7 +35,7 @@ if (sessionStorage.sessionId === undefined) {
   getNewSessionId()
 } else {
   // sessionStorage.clear();
-  // getSessionId();
+  // getNewSessionId();
 }
 
 
