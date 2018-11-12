@@ -12,8 +12,8 @@ const optionsObj = {
   'guid-strength-v4': 'RFC4122 SPEC version 4',
   'guid-dashes': 'Guids have Dashes',
   'guid-no-dashes': 'Guids do not have Dashes',
-  'guid-comma': 'Comma Delimited',
-  'guid-array': 'String Array'
+  'comma-delimited': 'Comma Delimited',
+  'string-array': 'String Array'
 }
 
 function getSessionId() {

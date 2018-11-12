@@ -3,7 +3,7 @@
     <div class="content">
       <div class="title">
         <h1 class="hero-heading">Unique ID</h1>
-        <img src="img/icon-reverse-finger9.png" alt="">
+        <img src="/img/icon-reverse-finger9.png" alt="">
       </div>
     </div>
   </div>
@@ -34,33 +34,33 @@
       </div>
       <div class="col-md-9">
         <fieldset>
-          <legend class="text-center">Select UUID Options</legend>
-          <form action="/guid/submit" method="post" enctype="application/x-www-form-urlencoded" class="was-validated" id="form-guid">
+          <legend class="text-center">Select GUID / UUID Options</legend>
+          <form action="/guid/submit" method="post" enctype="application/x-www-form-urlencoded" class="was-validated" id="form-main">
             <div class="form-group">
-              <select name="select-guid-count" id="select-guid-count" class="custom-select form-control-lg">
+              <select name="select-count" id="select-count" class="custom-select form-control-lg">
                 <option value="select-count" selected disabled>Select Count</option>
                 <option value="1">1</option>
                 <option value="25">25</option>
                 <option value="100">100</option>
               </select>
-              <div class="invalid-feedback" id="invalid-select-guid-count"> Sorry, an error occured. Try again?</div>
+              <div class="invalid-feedback" id="invalid-select-count"> Sorry, an error occured. Try again?</div>
             </div>
 
             <div class="form-group">
-              <select name="select-guid-format" id="select-guid-format" class="custom-select form-control-lg">
+              <select name="select-format" id="select-format" class="custom-select form-control-lg">
                 <option value="select-format" selected disabled>Select Data Format </option>
                 <option value="guid-dashes">Dashes - ex: '45745c60-7b1a-11e8-9c9c-2d42b21b1a3e'</option>
                 <option value="guid-no-dashes">No Dashes - ex: '45745c607b1a11e89c9c2d42b21b1a3e'</option>
               </select>
-              <div class="invalid-feedback" id="invalid-select-guid-format"> Sorry, an error occured. Try again?</div>
+              <div class="invalid-feedback" id="invalid-select-format"> Sorry, an error occured. Try again?</div>
             </div>
             <div class="form-group">
-              <select name="select-guid-output-format" id="select-guid-output-format" class="custom-select form-control-lg">
+              <select name="select-output-format" id="select-output-format" class="custom-select form-control-lg">
                 <option value="select-output" selected disabled>Select Output Collection Format</option>
-                <option value="guid-comma">Comma Delimited - ex: 45745c60- ..., 78373b42- ...</option>
-                <option value="guid-array">Array - ex: ["45745c60- ...", "78373b42- ..."]</option>
+                <option value="comma-delimited">Comma Delimited - ex: 45745c60- ..., 78373b42- ...</option>
+                <option value="string-array">Array - ex: ["45745c60- ...", "78373b42- ..."]</option>
               </select>
-              <div class="invalid-feedback" id="invalid-select-guid-output-format"> Sorry, an error occured. Try again?</div>
+              <div class="invalid-feedback" id="invalid-select-output-format"> Sorry, an error occured. Try again?</div>
             </div>
 
             <div class="form-group">

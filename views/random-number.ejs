@@ -1,7 +1,104 @@
-<h1> Random Number </h1>
-<p> <%= message %> </p>
-<p> <%= output %> </p>
-<h5>Integer Output ...</h5>
-<p> <%= someNbr %> </p>
-<p>Random Number: <%= randNbr %></p>
-<p>Random with spcial chars:  <%= randNbrSpecial %></p>
+<header class="hero" id="hero-random-number">
+  <div class="wrapper-hero">
+    <div class="content">
+      <div class="title">
+        <h1 class="hero-heading">Random Number</h1>
+        <img src="/img/icon-reverse-number1.png" alt="" srcset="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section-lead bg-light">
+  <div class="container">
+    <h1 class="heading-3 text-center">Configure Data</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-3">Hi there ... </div>
+      <div class="col-md-9">
+        <fieldset>
+          <legend class="text-center">Select Random Number Options</legend>
+
+          <form action="/random-number/submit" method="post" class="was-validated" enctype="application/x-www-form-urlencoded"
+            id="form-main">
+            <div class="form-group">
+              <select name="select-count" id="select-count" class="custom-select form-control-lg">
+                <option value="select-count" selected disabled>Select Count</option>
+                <option value="1">1</option>
+                <option value="25">25</option>
+                <option value="100">100</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-select-count"> Sorry, an error occured. Try again?</div>
+            </div>
+
+            <!-- <div class="form-group">
+              <select name="select-rand-nbr-length" id="select-rand-nbr-length" class="custom-select form-control-lg">
+                <option value="rand-nbr-length" selected disabled>Select Length of Each Number</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+                <option value="24">24</option>
+                <option value="32">32</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-select-format"> Sorry, an error occured. Try again?</div>
+            </div> -->
+
+            <div class="form-group">
+              <!-- <label class="col-form-label" for="inputDefault">Default input</label> -->
+              <input type="number" class="form-control form-control-lg input-field" placeholder="Length of each number (6 - 64)" name="input-rand-nbr-length" id="input-rand-nbr-length" min="6" max="64">
+              <div class="invalid-feedback" id="invalid-rand-nbr-length"> Sorry, an error occured. Try again?</div>
+            </div>
+
+            <div class="form-group">
+              <select name="select-rand-nbr-type" id="select-rand-nbr-type" class="custom-select form-control-lg">
+                <option value="rand-nbr-type" selected disabled>Select Data Format</option>
+                <option value="rand-nbr-numeric">Numeric - ex: 123456</option>
+                <option value="rand-nbr-alpha">AlphaNumeric - ex: 123ac6</option>
+                <option value="rand-nbr-mixed">AlphaNumeric w/ Special Characters - ex: 123ac6~[9</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-select-rand-nbr-type"> Sorry, an error occured. Try again?</div>
+            </div>
+
+            <div class="form-group">
+              <select name="select-output-format" id="select-output-format" class="custom-select form-control-lg">
+                <option value="select-format" selected disabled>Select Output Collection Format</option>
+                <option value="comma-delimited">Comma Delimited - ex: 45745c60 ..., 78373b42 ...</option>
+                <option value="string-array">Array - ex: ["45745c60 ...", "78373b42 ..."]</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-select-output-format"> Sorry, an error occured. Try again?</div>
+            </div>
+
+            <!-- options 
+          1 - data type
+          2 - length of each string
+          3 - include numbers, letters, special chars
+          -->
+
+            <!-- <div class="form-group">
+              <select name="" id=""></select>
+            </div> -->
+
+            <div class="recaptcha-wrapper mb-4">
+              <p class="lead text-center">beep. beep. <span><i class="fas fa-robot fa-2x"></i></span>
+                are you a Robot?</p>
+              <div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LfksnYUAAAAAIbzVm7f4NH7_3PZJvpdF-GlsaBv"></div>
+              <div id="g-recaptcha-msg" class="text-center recaptcha-msg">&nbsp;</div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <button type="submit" class="btn btn-primary btn-lg btn-submit-main btn-block" id="submit-page-data">
+                  <i class="fas fa-thumbs-up fa-2x"></i> Submit Request </button>
+              </div>
+              <div class="col-md-4">
+                <button type="submit" class="btn btn-primary btn-lg btn-submit-main btn-block" id="reset-page-data"> <i
+                    class="fas fa-sync fa-2x"></i> Reset Form</button>
+              </div>
+            </div>
+
+          </form>
+
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</section>
+<script defer src="/js/lightroast.js"></script>

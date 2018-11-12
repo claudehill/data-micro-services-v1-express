@@ -29,12 +29,12 @@ function lookupGuidOptions(storageId) {
 
 function buildGuidArrayFromOptions(obj) {
   var s = {};
-  s.count = obj.count;
+  s.count = parseInt(obj.count) || 1;
   console.log('BUILD GUID METHOD OBJ ... ', obj)
   s.version = (obj.strength === 'guid-strength-v4') ? 'v4' : 'v1';
   s.hasDashes = obj.format === 'guid-dashes';
   console.log('DASHES WERE S ... ', s.hasDashes)
-  s.isJsonArrayOutput = obj.formatColl = 'guid-array';
+  s.isJsonArrayOutput = (obj.formatColl === 'string-array') ? true : false;
   console.log('BUILD GUID ARRAY OP ... ', buildGuidArray(s.count, s.version, s.hasDashes, s.isJsonArrayOutput))
   return buildGuidArray(s.count, s.version, s.hasDashes, s.isJsonArrayOutput);
 }
@@ -62,8 +62,9 @@ function buildGuidArray(count, version, hasDashes, isJsonArrayOutput) {
   // switch output format
   if (isJsonArrayOutput) {
     ids = JSON.stringify(ids);
+  } else {
+    ids = ids.join(",")
   }
-
   return ids;
 }
 

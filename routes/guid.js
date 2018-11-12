@@ -32,11 +32,16 @@ router.get('/', (req, res, next) => {
 
 router.post('/submit', (req, res, next) => {
   // FOR NOW, forward to build guid ... 
-  guidCount = req.body['select-guid-count'];
-  guidFormat = req.body['select-guid-format'];
-  guidOutputFormat = req.body['select-guid-output-format'];
+  guidCount = req.body['select-count'];
+  guidFormat = req.body['select-format'];
+  guidOutputFormat = req.body['select-output-format'];
   guidStrength = req.body['select-guid-strength'];
-  sessionData = JSON.parse(req.body['session-data']);
+  console.log('req body came in as ........... ', req.body);
+  console.log('session data came in as ........... ', req.body['session-data']);
+  console.log('TYPEOF session data came in as ........... ', typeof req.body['session-data']);
+
+  sessionData = (typeof req.body['session-data'] === 'object') ? JSON.parse(req.body['session-data'][0]) : JSON.parse(req.body['session-data'])  
+  // sessionData = JSON.parse(req.body['session-data']);
   sessionId = sessionData.sessionId;
   sessionDateTime = sessionData.timestamp;
   sessionDateTimeFormatted = sessionData.timestring;
@@ -50,7 +55,6 @@ router.post('/submit', (req, res, next) => {
   // set session storage here ?....
 
   var localStorage = new Storage('./db.json', { strict: false, ws: '  ' })
-  // var myValue = { foo: 'bar', baz: 'quux' };
   var dataVal = {};
   dataVal.sessionId = sessionId;
   dataVal.count = guidCount;

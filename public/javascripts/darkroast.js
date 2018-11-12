@@ -34,8 +34,8 @@ if (el && adblockNotice) {
 if (sessionStorage.sessionId === undefined) {
   getNewSessionId()
 } else {
-  // sessionStorage.clear();
-  // getNewSessionId();
+  sessionStorage.clear();
+  getNewSessionId();
 }
 
 

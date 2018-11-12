@@ -302,7 +302,8 @@ footer {
  }
 
  #section-results-output{
-     background: url('../img/coffee-mug6.jpeg');
+     /* background: url('../img/coffee-mug6.jpeg'); */
+     /* background-image: url('../img/coffee-mug6.jpeg'); */
      background-size: cover;
      background-repeat: no-repeat;
  }
@@ -377,5 +378,13 @@ footer {
  select.is-valid {
    border: 2px solid #4BBF73 !important;
    
+ }
+
+ input.form-control-lg {
+   padding: 15px !important;
+ }
+
+ #session-data {
+   display: none;
  }
 

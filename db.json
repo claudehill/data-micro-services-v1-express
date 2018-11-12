@@ -197,14 +197,676 @@
   "80ba7ac9f7da24cb": {
     "sessionId": "80ba7ac9f7da24cb",
     "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "80ba7ac9f7da24cb",
+      "timestamp": "2018-11-02T05:59:01-04:00",
+      "timestring": "November 2nd 2018, 5:59:01 am"
+    }
+  },
+  "acf67b62fad8a1dc": {
+    "sessionId": "acf67b62fad8a1dc",
+    "count": "1",
+    "strength": "guid-strength-v4",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "acf67b62fad8a1dc",
+      "timestamp": "2018-11-02T11:14:25-04:00",
+      "timestring": "November 2nd 2018, 11:14:25 am"
+    }
+  },
+  "034541802dd3fe03": {
+    "sessionId": "034541802dd3fe03",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "034541802dd3fe03",
+      "timestamp": "2018-11-02T13:21:16-04:00",
+      "timestring": "November 2nd 2018, 1:21:16 pm"
+    }
+  },
+  "191e57d3ac16087c": {
+    "sessionId": "191e57d3ac16087c",
+    "count": "1",
     "strength": "guid-strength-v4",
     "type": "Guid",
     "format": "guid-dashes",
     "formatColl": "guid-array",
     "sessionInfo": {
-      "sessionId": "80ba7ac9f7da24cb",
-      "timestamp": "2018-11-02T05:59:01-04:00",
-      "timestring": "November 2nd 2018, 5:59:01 am"
+      "sessionId": "191e57d3ac16087c",
+      "timestamp": "2018-11-02T13:31:00-04:00",
+      "timestring": "November 2nd 2018, 1:31:00 pm"
+    }
+  },
+  "3e09d37d1055739a": {
+    "sessionId": "3e09d37d1055739a",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "3e09d37d1055739a",
+      "timestamp": "2018-11-02T13:45:01-04:00",
+      "timestring": "November 2nd 2018, 1:45:01 pm"
+    }
+  },
+  "f9f0dd3a90b97b35": {
+    "sessionId": "f9f0dd3a90b97b35",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "f9f0dd3a90b97b35",
+      "timestamp": "2018-11-02T13:45:47-04:00",
+      "timestring": "November 2nd 2018, 1:45:47 pm"
+    }
+  },
+  "8dc0b61a7682d7e8": {
+    "sessionId": "8dc0b61a7682d7e8",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "8dc0b61a7682d7e8",
+      "timestamp": "2018-11-02T14:10:15-04:00",
+      "timestring": "November 2nd 2018, 2:10:15 pm"
+    }
+  },
+  "e15a9d6a973fb17b": {
+    "sessionId": "e15a9d6a973fb17b",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "e15a9d6a973fb17b",
+      "timestamp": "2018-11-02T14:17:31-04:00",
+      "timestring": "November 2nd 2018, 2:17:31 pm"
+    }
+  },
+  "dec59e608260a6f9": {
+    "sessionId": "dec59e608260a6f9",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "dec59e608260a6f9",
+      "timestamp": "2018-11-02T14:29:05-04:00",
+      "timestring": "November 2nd 2018, 2:29:05 pm"
+    }
+  },
+  "725136f2c5714430": {
+    "sessionId": "725136f2c5714430",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "725136f2c5714430",
+      "timestamp": "2018-11-02T14:46:17-04:00",
+      "timestring": "November 2nd 2018, 2:46:17 pm"
+    }
+  },
+  "d11cf412e73178ff": {
+    "sessionId": "d11cf412e73178ff",
+    "count": "1",
+    "strength": "guid-strength-v4",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "d11cf412e73178ff",
+      "timestamp": "2018-11-02T15:32:35-04:00",
+      "timestring": "November 2nd 2018, 3:32:35 pm"
+    }
+  },
+  "f3bb4327bcee7798": {
+    "sessionId": "f3bb4327bcee7798",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "guid-array",
+    "sessionInfo": {
+      "sessionId": "f3bb4327bcee7798",
+      "timestamp": "2018-11-02T16:23:26-04:00",
+      "timestring": "November 2nd 2018, 4:23:26 pm"
+    }
+  },
+  "1c39cd92638963d4": {
+    "sessionId": "1c39cd92638963d4",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "1c39cd92638963d4",
+      "timestamp": "2018-11-02T16:24:32-04:00",
+      "timestring": "November 2nd 2018, 4:24:32 pm"
+    }
+  },
+  "8b9a3d41ccefdfd7": {
+    "sessionId": "8b9a3d41ccefdfd7",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "8b9a3d41ccefdfd7",
+      "timestamp": "2018-11-02T16:39:52-04:00",
+      "timestring": "November 2nd 2018, 4:39:52 pm"
+    }
+  },
+  "0300b940b8f5c479": {
+    "sessionId": "0300b940b8f5c479",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "guid-array",
+    "sessionInfo": {
+      "sessionId": "0300b940b8f5c479",
+      "timestamp": "2018-11-02T16:43:10-04:00",
+      "timestring": "November 2nd 2018, 4:43:10 pm"
+    }
+  },
+  "2b5096b7a63a278e": {
+    "sessionId": "2b5096b7a63a278e",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "2b5096b7a63a278e",
+      "timestamp": "2018-11-02T16:48:03-04:00",
+      "timestring": "November 2nd 2018, 4:48:03 pm"
+    }
+  },
+  "35030d57e9672f06": {
+    "sessionId": "35030d57e9672f06",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "guid-comma",
+    "sessionInfo": {
+      "sessionId": "35030d57e9672f06",
+      "timestamp": "2018-11-02T17:01:18-04:00",
+      "timestring": "November 2nd 2018, 5:01:18 pm"
+    }
+  },
+  "9bd1727ec38bb78c": {
+    "sessionId": "9bd1727ec38bb78c",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "9bd1727ec38bb78c",
+      "timestamp": "2018-11-03T17:17:03-04:00",
+      "timestring": "November 3rd 2018, 5:17:03 pm"
+    }
+  },
+  "a99e0e50faaebb49": {
+    "sessionId": "a99e0e50faaebb49",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "a99e0e50faaebb49",
+      "timestamp": "2018-11-07T06:09:48-05:00",
+      "timestring": "November 7th 2018, 6:09:48 am"
+    }
+  },
+  "e604e9be4bcf4a1d": {
+    "sessionId": "e604e9be4bcf4a1d",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "e604e9be4bcf4a1d",
+      "timestamp": "2018-11-07T06:27:51-05:00",
+      "timestring": "November 7th 2018, 6:27:51 am"
+    }
+  },
+  "bf192521ee418ac0": {
+    "sessionId": "bf192521ee418ac0",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "bf192521ee418ac0",
+      "timestamp": "2018-11-07T06:33:37-05:00",
+      "timestring": "November 7th 2018, 6:33:37 am"
+    }
+  },
+  "8a3d579e162b79fa": {
+    "sessionId": "8a3d579e162b79fa",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "8a3d579e162b79fa",
+      "timestamp": "2018-11-07T06:44:33-05:00",
+      "timestring": "November 7th 2018, 6:44:33 am"
+    }
+  },
+  "40d5aece8c95542c": {
+    "sessionId": "40d5aece8c95542c",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "40d5aece8c95542c",
+      "timestamp": "2018-11-07T06:47:45-05:00",
+      "timestring": "November 7th 2018, 6:47:45 am"
+    }
+  },
+  "f882a2b8a20d833c": {
+    "sessionId": "f882a2b8a20d833c",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "f882a2b8a20d833c",
+      "timestamp": "2018-11-07T12:01:28-05:00",
+      "timestring": "November 7th 2018, 12:01:28 pm"
+    }
+  },
+  "bdcce18bbc037728": {
+    "sessionId": "bdcce18bbc037728",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "bdcce18bbc037728",
+      "timestamp": "2018-11-07T12:12:00-05:00",
+      "timestring": "November 7th 2018, 12:12:00 pm"
+    }
+  },
+  "92a6e57797a73084": {
+    "sessionId": "92a6e57797a73084",
+    "count": "1",
+    "strength": "guid-strength-v4",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "92a6e57797a73084",
+      "timestamp": "2018-11-07T12:19:43-05:00",
+      "timestring": "November 7th 2018, 12:19:43 pm"
+    }
+  },
+  "114be6eb6f7763a7": {
+    "sessionId": "114be6eb6f7763a7",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "114be6eb6f7763a7",
+      "timestamp": "2018-11-07T18:33:46-05:00",
+      "timestring": "November 7th 2018, 6:33:46 pm"
+    }
+  },
+  "bc32bad56ad648b4": {
+    "sessionId": "bc32bad56ad648b4",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "bc32bad56ad648b4",
+      "timestamp": "2018-11-07T18:42:46-05:00",
+      "timestring": "November 7th 2018, 6:42:46 pm"
+    }
+  },
+  "30458eaff9d7c0fb": {
+    "sessionId": "30458eaff9d7c0fb",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "30458eaff9d7c0fb",
+      "timestamp": "2018-11-07T19:09:20-05:00",
+      "timestring": "November 7th 2018, 7:09:20 pm"
+    }
+  },
+  "016e912021986d88": {
+    "sessionId": "016e912021986d88",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "016e912021986d88",
+      "timestamp": "2018-11-07T19:41:22-05:00",
+      "timestring": "November 7th 2018, 7:41:22 pm"
+    }
+  },
+  "538c39c999d7ce49": {
+    "sessionId": "538c39c999d7ce49",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "538c39c999d7ce49",
+      "timestamp": "2018-11-07T19:47:18-05:00",
+      "timestring": "November 7th 2018, 7:47:18 pm"
+    }
+  },
+  "c6b77a9cf3095fa0": {
+    "sessionId": "c6b77a9cf3095fa0",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "c6b77a9cf3095fa0",
+      "timestamp": "2018-11-07T19:48:37-05:00",
+      "timestring": "November 7th 2018, 7:48:37 pm"
+    }
+  },
+  "7e00c0be014e625a": {
+    "sessionId": "7e00c0be014e625a",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "7e00c0be014e625a",
+      "timestamp": "2018-11-07T19:49:26-05:00",
+      "timestring": "November 7th 2018, 7:49:26 pm"
+    }
+  },
+  "53c279890720d539": {
+    "sessionId": "53c279890720d539",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "53c279890720d539",
+      "timestamp": "2018-11-07T19:54:45-05:00",
+      "timestring": "November 7th 2018, 7:54:45 pm"
+    }
+  },
+  "18762e529b4717e5": {
+    "sessionId": "18762e529b4717e5",
+    "count": "25",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-no-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "18762e529b4717e5",
+      "timestamp": "2018-11-08T05:54:27-05:00",
+      "timestring": "November 8th 2018, 5:54:27 am"
+    }
+  },
+  "6854753c36de387e": {
+    "sessionId": "6854753c36de387e",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "6854753c36de387e",
+      "timestamp": "2018-11-08T06:04:30-05:00",
+      "timestring": "November 8th 2018, 6:04:30 am"
+    }
+  },
+  "172942a115472d4d": {
+    "sessionId": "172942a115472d4d",
+    "count": "25",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "172942a115472d4d",
+      "timestamp": "2018-11-08T06:05:18-05:00",
+      "timestring": "November 8th 2018, 6:05:18 am"
+    }
+  },
+  "b7d0dab903fb4071": {
+    "sessionId": "b7d0dab903fb4071",
+    "count": "25",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "b7d0dab903fb4071",
+      "timestamp": "2018-11-08T06:09:24-05:00",
+      "timestring": "November 8th 2018, 6:09:24 am"
+    }
+  },
+  "19add073628d1499": {
+    "sessionId": "19add073628d1499",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "19add073628d1499",
+      "timestamp": "2018-11-08T19:16:16-05:00",
+      "timestring": "November 8th 2018, 7:16:16 pm"
+    }
+  },
+  "cc9daf8d2b6b1fd1": {
+    "sessionId": "cc9daf8d2b6b1fd1",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "cc9daf8d2b6b1fd1",
+      "timestamp": "2018-11-08T20:05:13-05:00",
+      "timestring": "November 8th 2018, 8:05:13 pm"
+    }
+  },
+  "dcccda1b4a0cddca": {
+    "sessionId": "dcccda1b4a0cddca",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "dcccda1b4a0cddca",
+      "timestamp": "2018-11-09T07:25:14-05:00",
+      "timestring": "November 9th 2018, 7:25:14 am"
+    }
+  },
+  "512846e810a1d86b": {
+    "sessionId": "512846e810a1d86b",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "512846e810a1d86b",
+      "timestamp": "2018-11-09T07:29:42-05:00",
+      "timestring": "November 9th 2018, 7:29:42 am"
+    }
+  },
+  "0210f46ae612d1c9": {
+    "sessionId": "0210f46ae612d1c9",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "0210f46ae612d1c9",
+      "timestamp": "2018-11-09T07:41:32-05:00",
+      "timestring": "November 9th 2018, 7:41:32 am"
+    }
+  },
+  "4b4690ce3600a5b7": {
+    "sessionId": "4b4690ce3600a5b7",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "4b4690ce3600a5b7",
+      "timestamp": "2018-11-09T09:41:06-05:00",
+      "timestring": "November 9th 2018, 9:41:06 am"
+    }
+  },
+  "845c0fa378c5a9ee": {
+    "sessionId": "845c0fa378c5a9ee",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "845c0fa378c5a9ee",
+      "timestamp": "2018-11-10T18:14:42-05:00",
+      "timestring": "November 10th 2018, 6:14:42 pm"
+    }
+  },
+  "5b1df87fb3829034": {
+    "sessionId": "5b1df87fb3829034",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "5b1df87fb3829034",
+      "timestamp": "2018-11-12T10:08:19-05:00",
+      "timestring": "November 12th 2018, 10:08:19 am"
+    }
+  },
+  "79c4ceb63ca20f08": {
+    "sessionId": "79c4ceb63ca20f08",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "79c4ceb63ca20f08",
+      "timestamp": "2018-11-12T10:14:58-05:00",
+      "timestring": "November 12th 2018, 10:14:58 am"
+    }
+  },
+  "e2effef7bcd01350": {
+    "sessionId": "e2effef7bcd01350",
+    "count": "25",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "e2effef7bcd01350",
+      "timestamp": "2018-11-12T10:20:31-05:00",
+      "timestring": "November 12th 2018, 10:20:31 am"
+    }
+  },
+  "36073dc5f077287d": {
+    "sessionId": "36073dc5f077287d",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "36073dc5f077287d",
+      "timestamp": "2018-11-12T10:27:32-05:00",
+      "timestring": "November 12th 2018, 10:27:32 am"
+    }
+  },
+  "ac0814bc53ddf351": {
+    "sessionId": "ac0814bc53ddf351",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "ac0814bc53ddf351",
+      "timestamp": "2018-11-12T10:44:03-05:00",
+      "timestring": "November 12th 2018, 10:44:03 am"
+    }
+  },
+  "5a163ecb7d83daf2": {
+    "sessionId": "5a163ecb7d83daf2",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "5a163ecb7d83daf2",
+      "timestamp": "2018-11-12T10:45:18-05:00",
+      "timestring": "November 12th 2018, 10:45:18 am"
+    }
+  },
+  "c5b96731d16ce59d": {
+    "sessionId": "c5b96731d16ce59d",
+    "count": "1",
+    "strength": "guid-strength-v1",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "c5b96731d16ce59d",
+      "timestamp": "2018-11-12T11:02:14-05:00",
+      "timestring": "November 12th 2018, 11:02:14 am"
     }
   }
 }
