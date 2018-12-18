@@ -51,6 +51,12 @@ app.use('/jwt-test', jwtTestPageRouter);
 app.use('/globals', globalRouter);
 app.use('/results', resultsRouter);
 
+// capture user's IP address and log it
+app.use(function(req, res, next) { 
+  console.log('USER IP ADDRESS ', req.ip)
+  next();
+ });
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

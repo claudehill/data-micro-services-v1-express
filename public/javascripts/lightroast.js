@@ -27,6 +27,8 @@ let isRecaptchaValid = false;
 let isErrorState = false;
 let sessionId;
 let pagePathName = window.location.pathname;
+const isGuidPage = pagePathName.includes('guid')
+const isRandNbrPage = pagePathName.includes('random-number')
 
 if (selectCount) {
   var selectCountOptions = selectCount.getElementsByTagName('option');
@@ -41,27 +43,44 @@ $(document).ready(() => {
     setMaxCountRestricted();
   }
 
-  // -- GUID PAGE
+  // -- COMMON
   selectCount.addEventListener('change', () => { resetErrorState(); });
   selectFormat.addEventListener('change', () => { resetErrorState(); });
   selectFormatOutput.addEventListener('change', () => { resetErrorState(); });
-  selectStrength.addEventListener('change', () => { resetErrorState(); });
-  // -- random number page
+  // -- GUID PAGE
+  if (isGuidPage) {
+    selectStrength.addEventListener('change', () => { resetErrorState(); });
+  }
+  // -- random number page 
+  if (isRandNbrPage) {
+    // if change to float, disable length field
+    selectFormat.addEventListener('change', () => { disableLengthForFloat(); })
+    inputRandNbrLength.addEventListener('change', () => { resetErrorState(); });
+  }
+
 
   btnSubmit.addEventListener('click', (e) => {
-    // 1. append variable to form  & submit ... 
     appendSessionData();
     validateOptionsGuid(e);
   });
 });
 
 function resetErrorState() {
-  console.log('pagePathName ... ', pagePathName)
   selectCount.classList.remove('is-invalid');
   selectFormat.classList.remove('is-invalid');
   selectFormatOutput.classList.remove('is-invalid');
-  selectStrength.classList.remove('is-invalid');
+  if (isGuidPage) {
+    selectStrength.classList.remove('is-invalid');
+  }
+}
 
+function disableLengthForFloat() {
+  if (selectFormat.value === 'rand-nbr-float') {
+    inputRandNbrLength.value = '';
+    inputRandNbrLength.disabled = true;
+  } else {
+    inputRandNbrLength.disabled = false;
+  }
 }
 
 function setMaxCountRestricted() {
@@ -128,24 +147,22 @@ function validateOptionsGuid(e) {
       e.preventDefault();
     }
   })
+}
 
-
+function validateOptionsRandomNumber(e) {
+  
 }
 
 function appendSessionData() {
   if (sessionStorage.sessionId) {
     var sid = JSON.parse(sessionStorage.sessionId).sessionId; // pass this on post
     $('#form-main').append("<input type='hidden' name='session-data' value='" + sessionStorage.sessionId + "' />");
-    // formMain.append("<input type='hidden' name='session-data' value='" + sessionStorage.sessionId + "' />");
     return true;
   }
   return false;
 }
 
-async function getRecaptchaResponse() {
-  return await validateRecaptcha();
-}
-
+async function getRecaptchaResponse() { return await validateRecaptcha(); }
 
 //TODO: Verify referrer-policy header
 function validateRecaptcha() {
@@ -177,9 +194,9 @@ function validateRecaptcha() {
       }
       return data;
     })
-    .catch(err => { 
-      console.error('*** ERROR *** ', err) 
+    .catch(err => {
+      console.error('*** ERROR *** ', err)
+      //FIXME: ** REMOVE THIS **
       alert('An error occured ... ' + err)
     })
-
 }

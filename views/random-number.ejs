@@ -31,36 +31,25 @@
               <div class="invalid-feedback" id="invalid-select-count"> Sorry, an error occured. Try again?</div>
             </div>
 
-            <!-- <div class="form-group">
-              <select name="select-rand-nbr-length" id="select-rand-nbr-length" class="custom-select form-control-lg">
-                <option value="rand-nbr-length" selected disabled>Select Length of Each Number</option>
-                <option value="8">8</option>
-                <option value="16">16</option>
-                <option value="24">24</option>
-                <option value="32">32</option>
-              </select>
-              <div class="invalid-feedback" id="invalid-select-format"> Sorry, an error occured. Try again?</div>
-            </div> -->
-
             <div class="form-group">
-              <!-- <label class="col-form-label" for="inputDefault">Default input</label> -->
-              <input type="number" class="form-control form-control-lg input-field" placeholder="Length of each number (6 - 64)" name="input-rand-nbr-length" id="input-rand-nbr-length" min="6" max="64">
-              <div class="invalid-feedback" id="invalid-rand-nbr-length"> Sorry, an error occured. Try again?</div>
-            </div>
-
-            <div class="form-group">
-              <select name="select-rand-nbr-type" id="select-rand-nbr-type" class="custom-select form-control-lg">
+              <select name="select-format" id="select-format" class="custom-select form-control-lg">
                 <option value="rand-nbr-type" selected disabled>Select Data Format</option>
                 <option value="rand-nbr-numeric">Numeric - ex: 123456</option>
+                <option value="rand-nbr-float">Numeric Float (1 - 100) - ex: 72.123456789</option>
                 <option value="rand-nbr-alpha">AlphaNumeric - ex: 123ac6</option>
                 <option value="rand-nbr-mixed">AlphaNumeric w/ Special Characters - ex: 123ac6~[9</option>
               </select>
               <div class="invalid-feedback" id="invalid-select-rand-nbr-type"> Sorry, an error occured. Try again?</div>
             </div>
 
+            <div class="form-group" id="rand-nbr-length">
+              <input type="number" class="form-control form-control-lg input-field" placeholder="Length of each number (6 - 32)" name="input-rand-nbr-length" id="input-rand-nbr-length" min="6" max="32">
+              <div class="invalid-feedback" id="invalid-rand-nbr-length"> Sorry, an error occured. Try again?</div>
+            </div>
+
             <div class="form-group">
               <select name="select-output-format" id="select-output-format" class="custom-select form-control-lg">
-                <option value="select-format" selected disabled>Select Output Collection Format</option>
+                <option value="select-output-format" selected disabled>Select Output Collection Format</option>
                 <option value="comma-delimited">Comma Delimited - ex: 45745c60 ..., 78373b42 ...</option>
                 <option value="string-array">Array - ex: ["45745c60 ...", "78373b42 ..."]</option>
               </select>
@@ -89,7 +78,7 @@
                   <i class="fas fa-thumbs-up fa-2x"></i> Submit Request </button>
               </div>
               <div class="col-md-4">
-                <button type="submit" class="btn btn-primary btn-lg btn-submit-main btn-block" id="reset-page-data"> <i
+                <button type="reset" class="btn btn-primary btn-lg btn-submit-main btn-block" id="reset-page-data"> <i
                     class="fas fa-sync fa-2x"></i> Reset Form</button>
               </div>
             </div>

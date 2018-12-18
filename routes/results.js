@@ -38,8 +38,6 @@ router.get('/:session', (req, res, next) => {
  
   console.log('modified object (SESSION METHOD) ... ', modifiedObj)
 
-  // genGuid.lookupGuidOptions(session)
-
   // res.render('results', { receipt: storageObj })
   res.render('results')
 });
@@ -72,15 +70,27 @@ router.get('/output/:id', (req, res, next) => {
   var sessionObj = localStorage.getItem(sessionId);
   console.log('SESSION OBJECT ... ', sessionObj)
   var results = utils.routeObjectByType(sessionObj);
+  console.log('in results, output is ...... ', results)
   res.json({ results: results })
 });
 
 function convertToStringFormat(obj) {
-  isConvertedStringFormat = true;
   console.log('convert method ... VALUE INCOMING ** ', obj)
-  obj.strength = optionsObject[obj.strength];
+
+  switch (val = obj.type.toLowerCase()) {
+    case val.includes('guid'):
+     obj.strength = optionsObject[obj.strength];   
+      break;
+    case val.includes('random number'):
+      obj.lengthEach = optionsObject[obj.rand-nbr-length-each];
+      break;
+  
+    default:
+      break;
+  }
   obj.format = optionsObject[obj.format];
   obj.formatColl = optionsObject[obj.formatColl];
+  isConvertedStringFormat = true;
   return obj;
 }
 

@@ -868,5 +868,502 @@
       "timestamp": "2018-11-12T11:02:14-05:00",
       "timestring": "November 12th 2018, 11:02:14 am"
     }
+  },
+  "df15afbb84638d0f": {
+    "sessionId": "df15afbb84638d0f",
+    "count": "1",
+    "lengthEach": "22",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "df15afbb84638d0f",
+      "timestamp": "2018-11-12T14:56:36-05:00",
+      "timestring": "November 12th 2018, 2:56:36 pm"
+    }
+  },
+  "85b410bfb57d4726": {
+    "sessionId": "85b410bfb57d4726",
+    "count": "1",
+    "lengthEach": "8",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-alpha",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "85b410bfb57d4726",
+      "timestamp": "2018-11-12T18:07:32-05:00",
+      "timestring": "November 12th 2018, 6:07:32 pm"
+    }
+  },
+  "326eb0245199013c": {
+    "sessionId": "326eb0245199013c",
+    "count": "1",
+    "lengthEach": "24",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "326eb0245199013c",
+      "timestamp": "2018-11-12T19:29:15-05:00",
+      "timestring": "November 12th 2018, 7:29:15 pm"
+    }
+  },
+  "e9fd7a31c30aa6b9": {
+    "sessionId": "e9fd7a31c30aa6b9",
+    "count": "1",
+    "lengthEach": "8",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "e9fd7a31c30aa6b9",
+      "timestamp": "2018-11-12T19:33:17-05:00",
+      "timestring": "November 12th 2018, 7:33:17 pm"
+    }
+  },
+  "345babe37ad37c05": {
+    "sessionId": "345babe37ad37c05",
+    "count": "1",
+    "lengthEach": "8",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "345babe37ad37c05",
+      "timestamp": "2018-11-13T11:50:58-05:00",
+      "timestring": "November 13th 2018, 11:50:58 am"
+    }
+  },
+  "2229cde5f20ac402": {
+    "sessionId": "2229cde5f20ac402",
+    "count": "1",
+    "strength": "guid-strength-v4",
+    "type": "Guid",
+    "format": "guid-dashes",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "2229cde5f20ac402",
+      "timestamp": "2018-11-13T12:13:49-05:00",
+      "timestring": "November 13th 2018, 12:13:49 pm"
+    }
+  },
+  "58678838a82257ec": {
+    "sessionId": "58678838a82257ec",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "58678838a82257ec",
+      "timestamp": "2018-11-13T12:17:09-05:00",
+      "timestring": "November 13th 2018, 12:17:09 pm"
+    }
+  },
+  "621529c451cea117": {
+    "sessionId": "621529c451cea117",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "621529c451cea117",
+      "timestamp": "2018-11-13T12:43:24-05:00",
+      "timestring": "November 13th 2018, 12:43:24 pm"
+    }
+  },
+  "4122aef632b35789": {
+    "sessionId": "4122aef632b35789",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "4122aef632b35789",
+      "timestamp": "2018-11-17T04:18:58-05:00",
+      "timestring": "November 17th 2018, 4:18:58 am"
+    }
+  },
+  "033119fca1e03ea2": {
+    "sessionId": "033119fca1e03ea2",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-alpha",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "033119fca1e03ea2",
+      "timestamp": "2018-11-17T05:11:00-05:00",
+      "timestring": "November 17th 2018, 5:11:00 am"
+    }
+  },
+  "63ee19e655f65456": {
+    "sessionId": "63ee19e655f65456",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-alpha",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "63ee19e655f65456",
+      "timestamp": "2018-11-17T17:04:31-05:00",
+      "timestring": "November 17th 2018, 5:04:31 pm"
+    }
+  },
+  "8f9f0ff4b6bc99ac": {
+    "sessionId": "8f9f0ff4b6bc99ac",
+    "count": "1",
+    "lengthEach": "8",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-float",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "8f9f0ff4b6bc99ac",
+      "timestamp": "2018-11-19T18:20:24-05:00",
+      "timestring": "November 19th 2018, 6:20:24 pm"
+    }
+  },
+  "f9b9e884a2d38d7c": {
+    "sessionId": "f9b9e884a2d38d7c",
+    "count": "1",
+    "lengthEach": "8",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "f9b9e884a2d38d7c",
+      "timestamp": "2018-11-20T06:24:57-05:00",
+      "timestring": "November 20th 2018, 6:24:57 am"
+    }
+  },
+  "24294c2d347b3fd7": {
+    "sessionId": "24294c2d347b3fd7",
+    "count": "1",
+    "lengthEach": "8",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "24294c2d347b3fd7",
+      "timestamp": "2018-11-20T06:28:18-05:00",
+      "timestring": "November 20th 2018, 6:28:18 am"
+    }
+  },
+  "b42c0856bff56de2": {
+    "sessionId": "b42c0856bff56de2",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "b42c0856bff56de2",
+      "timestamp": "2018-11-20T06:30:46-05:00",
+      "timestring": "November 20th 2018, 6:30:46 am"
+    }
+  },
+  "4f63f082dc133614": {
+    "sessionId": "4f63f082dc133614",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "4f63f082dc133614",
+      "timestamp": "2018-11-20T06:32:14-05:00",
+      "timestring": "November 20th 2018, 6:32:14 am"
+    }
+  },
+  "4ab927a181ea41e3": {
+    "sessionId": "4ab927a181ea41e3",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "4ab927a181ea41e3",
+      "timestamp": "2018-11-20T06:33:32-05:00",
+      "timestring": "November 20th 2018, 6:33:32 am"
+    }
+  },
+  "ad134b36dab06dcc": {
+    "sessionId": "ad134b36dab06dcc",
+    "count": "1",
+    "lengthEach": "11",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-alpha",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "ad134b36dab06dcc",
+      "timestamp": "2018-11-20T12:05:03-05:00",
+      "timestring": "November 20th 2018, 12:05:03 pm"
+    }
+  },
+  "8f9c0e3ff4bc4ff7": {
+    "sessionId": "8f9c0e3ff4bc4ff7",
+    "count": "1",
+    "lengthEach": "11",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-alpha",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "8f9c0e3ff4bc4ff7",
+      "timestamp": "2018-11-21T06:39:34-05:00",
+      "timestring": "November 21st 2018, 6:39:34 am"
+    }
+  },
+  "ced1fc397d0b1ea6": {
+    "sessionId": "ced1fc397d0b1ea6",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-float",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "ced1fc397d0b1ea6",
+      "timestamp": "2018-11-21T06:57:13-05:00",
+      "timestring": "November 21st 2018, 6:57:13 am"
+    }
+  },
+  "2ef4e61121119edf": {
+    "sessionId": "2ef4e61121119edf",
+    "count": "1",
+    "lengthEach": "11",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "2ef4e61121119edf",
+      "timestamp": "2018-11-26T16:58:38-05:00",
+      "timestring": "November 26th 2018, 4:58:38 pm"
+    }
+  },
+  "ad1ee0e8fb025b1c": {
+    "sessionId": "ad1ee0e8fb025b1c",
+    "count": "1",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-float",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "ad1ee0e8fb025b1c",
+      "timestamp": "2018-11-26T17:20:03-05:00",
+      "timestring": "November 26th 2018, 5:20:03 pm"
+    }
+  },
+  "583e647d9b11a06b": {
+    "sessionId": "583e647d9b11a06b",
+    "lengthEach": "32",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "583e647d9b11a06b",
+      "timestamp": "2018-11-26T18:29:12-05:00",
+      "timestring": "November 26th 2018, 6:29:12 pm"
+    }
+  },
+  "63d4363b8abe8931": {
+    "sessionId": "63d4363b8abe8931",
+    "count": "1",
+    "lengthEach": "22",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "63d4363b8abe8931",
+      "timestamp": "2018-11-26T18:51:14-05:00",
+      "timestring": "November 26th 2018, 6:51:14 pm"
+    }
+  },
+  "3306523ec32d0a21": {
+    "sessionId": "3306523ec32d0a21",
+    "count": "1",
+    "lengthEach": "11",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "3306523ec32d0a21",
+      "timestamp": "2018-11-26T18:58:52-05:00",
+      "timestring": "November 26th 2018, 6:58:52 pm"
+    }
+  },
+  "9b7854a5e4026aa8": {
+    "sessionId": "9b7854a5e4026aa8",
+    "count": "1",
+    "lengthEach": "11",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "9b7854a5e4026aa8",
+      "timestamp": "2018-11-26T19:00:24-05:00",
+      "timestring": "November 26th 2018, 7:00:24 pm"
+    }
+  },
+  "b8a9257a450aee62": {
+    "sessionId": "b8a9257a450aee62",
+    "count": "1",
+    "lengthEach": "11",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "b8a9257a450aee62",
+      "timestamp": "2018-11-26T19:02:56-05:00",
+      "timestring": "November 26th 2018, 7:02:56 pm"
+    }
+  },
+  "f2623a050bda833c": {
+    "sessionId": "f2623a050bda833c",
+    "lengthEach": "11",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "f2623a050bda833c",
+      "timestamp": "2018-11-26T19:27:31-05:00",
+      "timestring": "November 26th 2018, 7:27:31 pm"
+    }
+  },
+  "5a25bf1bf8202a6d": {
+    "sessionId": "5a25bf1bf8202a6d",
+    "count": "1",
+    "lengthEach": "11",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "5a25bf1bf8202a6d",
+      "timestamp": "2018-11-26T19:31:11-05:00",
+      "timestring": "November 26th 2018, 7:31:11 pm"
+    }
+  },
+  "a86d4df4363b539c": {
+    "sessionId": "a86d4df4363b539c",
+    "count": "1",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-float",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "a86d4df4363b539c",
+      "timestamp": "2018-11-27T06:09:42-05:00",
+      "timestring": "November 27th 2018, 6:09:42 am"
+    }
+  },
+  "d1889326eb0037c2": {
+    "sessionId": "d1889326eb0037c2",
+    "count": "25",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-float",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "d1889326eb0037c2",
+      "timestamp": "2018-11-27T06:26:17-05:00",
+      "timestring": "November 27th 2018, 6:26:17 am"
+    }
+  },
+  "716e77c101660b68": {
+    "sessionId": "716e77c101660b68",
+    "count": "25",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "716e77c101660b68",
+      "timestamp": "2018-11-27T06:38:10-05:00",
+      "timestring": "November 27th 2018, 6:38:10 am"
+    }
+  },
+  "80775e8bddfb4575": {
+    "sessionId": "80775e8bddfb4575",
+    "count": "1",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-float",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "80775e8bddfb4575",
+      "timestamp": "2018-11-27T11:44:14-05:00",
+      "timestring": "November 27th 2018, 11:44:14 am"
+    }
+  },
+  "e57b2f29a0257e97": {
+    "sessionId": "e57b2f29a0257e97",
+    "count": "1",
+    "lengthEach": "12",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-mixed",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "e57b2f29a0257e97",
+      "timestamp": "2018-11-28T06:34:44-05:00",
+      "timestring": "November 28th 2018, 6:34:44 am"
+    }
+  },
+  "f122ea1d69032f7c": {
+    "sessionId": "f122ea1d69032f7c",
+    "count": "1",
+    "lengthEach": "22",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "formatColl": "comma-delimited",
+    "sessionInfo": {
+      "sessionId": "f122ea1d69032f7c",
+      "timestamp": "2018-11-30T07:36:50-05:00",
+      "timestring": "November 30th 2018, 7:36:50 am"
+    }
+  },
+  "49667328299a1653": {
+    "sessionId": "49667328299a1653",
+    "count": "1",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-float",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "49667328299a1653",
+      "timestamp": "2018-11-30T09:28:58-05:00",
+      "timestring": "November 30th 2018, 9:28:58 am"
+    }
+  },
+  "e83d06ecf3521031": {
+    "sessionId": "e83d06ecf3521031",
+    "count": "1",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-float",
+    "formatColl": "string-array",
+    "sessionInfo": {
+      "sessionId": "e83d06ecf3521031",
+      "timestamp": "2018-12-04T11:54:28-05:00",
+      "timestring": "December 4th 2018, 11:54:28 am"
+    }
+  },
+  "a610154a0332e1d1": {
+    "sessionId": "a610154a0332e1d1",
+    "count": "1",
+    "lengthEach": "",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-alpha",
+    "sessionInfo": {
+      "sessionId": "a610154a0332e1d1",
+      "timestamp": "2018-12-06T06:26:50-05:00",
+      "timestring": "December 6th 2018, 6:26:50 am"
+    }
+  },
+  "6b5534a23bb996fe": {
+    "sessionId": "6b5534a23bb996fe",
+    "count": "1",
+    "lengthEach": "",
+    "type": "RANDOM NUMBER",
+    "format": "rand-nbr-numeric",
+    "sessionInfo": {
+      "sessionId": "6b5534a23bb996fe",
+      "timestamp": "2018-12-06T18:07:11-05:00",
+      "timestring": "December 6th 2018, 6:07:11 pm"
+    }
   }
 }
